@@ -29,7 +29,7 @@ public class Classificacao {
 	private Usuario usuario;
 	
 	@OneToMany(mappedBy = "classificacao")
-	private Set<CadastrarReceita> cadastrarReceitas;
+	private Set<Receita> receitas;
 	
 	public Long getId() {
 		return id;
@@ -55,12 +55,12 @@ public class Classificacao {
 		this.usuario = usuario;
 	}
 
-	public Set<CadastrarReceita> getCadastrarReceita(){
-		return cadastrarReceitas;
+	public Set<Receita> getReceita(){
+		return receitas;
 	}
 	
-	public void setCadastrarReceitas(Set<CadastrarReceita>cadastrarReceitas) {
-		this.cadastrarReceitas = cadastrarReceitas;
+	public void setReceitas(Set<Receita>receitas) {
+		this.receitas = receitas;
 	}
 	
 	@Override

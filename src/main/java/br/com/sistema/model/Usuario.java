@@ -48,7 +48,7 @@ public class Usuario {
 	private Set<Comentario>comentarios;
 
 	@OneToMany(mappedBy = "usuario")
-	private Set<CadastrarReceita>cadastrarReceitas;
+	private Set<Receita>cadastrarReceitas;
 	
 	public String getNome() {
 		return nome;
@@ -90,11 +90,11 @@ public class Usuario {
 		this.comentarios = comentarios;
 	}
 
-	public Set<CadastrarReceita> getCadastrarReceita(){
+	public Set<Receita> getCadastrarReceita(){
 		return cadastrarReceitas;
 	}
 	
-	public void setCadastrarReceita(Set<CadastrarReceita>cadastrarReceitas) {
+	public void setCadastrarReceita(Set<Receita>cadastrarReceitas) {
 		this.cadastrarReceitas = cadastrarReceitas;
 	}
 	

@@ -16,8 +16,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.lang.NonNull;
 
-@Entity(name= "cadastrarReceita")
-public class CadastrarReceita {
+@Entity(name= "receita")
+public class Receita {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,10 +54,10 @@ public class CadastrarReceita {
 	@JoinColumn(name = "usuario_id", nullable = false)
 	private Usuario usuario;
 	
-	@OneToMany(mappedBy = "cadastrarReceita")
+	@OneToMany(mappedBy = "receita")
 	private Set<Categoria> categorias;
 	
-	@ManyToMany(mappedBy = "cadastrarReceitas")
+	@ManyToMany(mappedBy = "receitas")
 	private List<Comentario>comentarios;
 	
 	public Long getId() {
@@ -142,7 +142,7 @@ public class CadastrarReceita {
 
 	@Override
 	public String toString() {
-		return "CadastrarReceita [id=" + id + ", nome=" + nome + ","
+		return "Receita [id=" + id + ", nome=" + nome + ","
 				+ " ingredientes=" + ingredientes + ", foto=" + foto
 				+ ", porcoes=" + porcoes + ", tempoPreparo=" + tempoPreparo + ","
 				+ " modoPreparo=" + modoPreparo + "]";

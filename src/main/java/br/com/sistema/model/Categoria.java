@@ -22,8 +22,8 @@ public class Categoria {
 	private String nome;
 	
 	@ManyToOne
-	@JoinColumn(name = "cadastrarReceita_id", nullable = false)
-	private CadastrarReceita cadastrarReceita;
+	@JoinColumn(name = "receita_id", nullable = false)
+	private Receita receita;
 
 	public Long getId() {
 		return Id;
@@ -41,12 +41,12 @@ public class Categoria {
 		this.nome = nome;
 	}
 	
-	public CadastrarReceita getCadastrarReceita() {
-		return cadastrarReceita;
+	public Receita getReceita() {
+		return receita;
 	}
 	
-	public void setCadastrarReceita(CadastrarReceita cadastrarReceita) {
-		this.cadastrarReceita = cadastrarReceita;
+	public void setReceita(Receita receita) {
+		this.receita = receita;
 	}
 
 	@Override

@@ -31,9 +31,9 @@ public class Comentario {
 	private Usuario usuario;
 	
 	@ManyToMany
-	@JoinTable(name="comentario_cadastrarReceita",
+	@JoinTable(name="comentario_receita",
 		joinColumns = @JoinColumn(name = "comentario_id"),
-		inverseJoinColumns = @JoinColumn(name = "cadastrarReceita_id"))
+		inverseJoinColumns = @JoinColumn(name = "receita_id"))
 	private List<Comentario>comentarios;
 
 	public Long getId() {
