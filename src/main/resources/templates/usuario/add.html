@@ -3,101 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Portifólios</title>
+    <title>Cadastro</title>
 
-    <!--CSS-->
-    <link rel="stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/fontawesome-5.14.0/css/all.css}">
-    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+      <!--CSS-->
+      <link rel="Stylesheet" type="text/css" href="../../static/css/estilo.css">
+      <link rel="Stylesheet" href="../../static/bootstrap-4.5.2/css/bootstrap.min.css">
+      <script src="../../static/fontawesome-5.14.0/css/all.min.css"></script>
+     
+
 
 </head>
-<body>
-    <!--MENU-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" th:href="@{/}">Gerenciamento de Funcionários</a>
-        <!--BOTÃO MENU-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
-            aria-controls="navbarMenu" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-        </button>  
-        <!--ITENS DO MENU-->
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link " th:href="@{/}">Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" th:href="@{/funcionario/list}">Funcionários</a>
-                </li>
-            </ul>
+<body class="body">
+
+    <!--ALERTS-->
+    <div class="alert alert-danger msg" role="alert" id="msgErro">
+        Preencha todos os campos!
+    </div>
+    <div class="alert alert-warning msg" role="alert" id="msgErro2">
+        Senhas diferentes!
+    </div>
+    <div class="alert alert-success msg" role="alert" id="msgSucesso">
+        Cadastro realizado com sucesso!
+    </div>
+    
+    <!--CONTAINER PRINCIPAL-->
+    <div class="div-principal">
+        <div class="imagem-logo">
+            <img src="../../static/SRC/riceAndBeans.png" id="img-logo">
         </div>
-    </nav>
-
-
-    <!--CONTEÚDO-->
-    <div class="container container-funcionario">
-        
-		<div class="bg-dark frm-titulo">
-            <h3>Funcionário</h3>
-        </div>
-
-        <form th:object="${funcionario}"
-            th:action="@{/funcionario/save}" method="POST">
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Código</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="codigo" th:field="*{id}" readonly>
-                </div>    
+        <!--FORMULÁRIO-->
+        <form class="form-container">
+            <input type="name" placeholder="Nome completo" class="inputs" id="nome" onblur="name">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs" id="email">
+            <input type="password" placeholder="Senha" class="inputs" id="senha">
+            <input type="password" placeholder="Confirmar senha" class="inputs" id="confirmarSenha">
+            <div class="botoes">
+                <button type="button" class="btns" onclick="cadastrar()">Cadastrar</button>
             </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Nome</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nome" th:field="*{nome}" required>
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Cargo</label>
-                <div class="col-sm-10">
-                    <select class="form-control" th:field="*{cargo}" required>
-                        <option value="Contabilidade">Contabilidade</option>
-                        <option value="Financeiro">Financeiro</option>
-                        <option value="Gerente">Gerente</option>
-                        <option value="TI">TI</option>
-                        <option value="Vendedor">Vendedor</option>
-                        <option value="Zelador">Zelador</option>
-                    </select>
-                    
-                </div>    
-            </div>
-
-            <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-5">
-                    <button type="button" class="btn btn-sm btn-light btn-controle"
-                        onclick="window.location.href='./list'">
-                        <i class="fa fa-ban"></i> Cancelar
-                    </button>
-                </div>
-                <div class="col-sm-5">
-                    <button type="submit" class="btn btn-sm btn-success btn-controle">
-                        <i class="fa fa-save"></i> Salvar
-                    </button>
-                </div>
-
-            </div>
-
-
         </form>
-        
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="elementoFooter">
+            © Created by Innovation TECH
+            <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
+        </div>
     </div>
 
 
+    <!--Script-->
+    <script type="text/javascript">
+        const abrirLogin = function(){
+            window.location.href = "Login.html";
+            return abrirLogin;
+        }
+        const cadastrar = function () {
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let senha = document.getElementById('senha').value;
+            let confirmarSenha = document.getElementById('confirmarSenha').value;
 
+            if(nome == "" || email == "" || senha == "" || confirmarSenha == "" ){
+                $('#msgErro').slideToggle(400).delay(2000).slideUp(400);
+            }else if(confirmarSenha != senha){
+                $('#msgErro2').slideToggle(400).delay(2000).slideUp(400);
+            }else{
+                $('#msgSucesso').slideToggle(400).delay(2000).slideUp(400);
+                abrirLogin;
+            }
+        } 
+    </script>
+     <!--SCRIPTS-->
+    <script src="../../static/bootstrap-4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../static/js/jquery-3.5.1.min.js"></script>
 
-    <!-- JS -->
-    <script th:src="@{/js/jquery-3.5.1.min.js}"></script>
-    <script th:src="@{/bootstrap-4.5.2/js/bootstrap.min.js}"></script>
 </body>
 </html>

@@ -3,58 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Portifólios</title>
+    <title>Rice and Beans</title>
 
     <!--CSS-->
-    <link rel="stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/fontawesome-5.14.0/css/all.css}">
-    <link rel="stylesheet" th:href="@{/css/estilo.css}">
-
+    <link rel="Stylesheet" type="text/css" th:href="@{/css/estilo.css}">
+    <link rel="Stylesheet" href="{/static/bootstrap-4.5.2/css/bootstrap.min.css}">
+    <script src="../static/fontawesome-5.14.0/css/all.min.css"></script>
+   
 </head>
 <body>
-    <!--MENU-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" th:href="@{/}">Gerenciamento de Funcionários</a>
-        <!--BOTÃO MENU-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
-            aria-controls="navbarMenu" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-        </button>  
-        <!--ITENS DO MENU-->
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" th:href="@{/}">Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/funcionario/list}">Funcionários</a>
-                </li>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+                <i class="fas fa-bars "></i>
+
+        </label>
+        <img src="../static/SRC/RicePNG3.png" alt="rice and beans"  class="logo">
+            <ul>
+                <li><a th:href="@{/}">Inicio</a></li>
+                <li><a th:href="#">Cadastrar receita</a></li>
+                <li><a href="#">Categorias</a></li>
             </ul>
-        </div>
     </nav>
 
-
-    <!--CONTEÚDO-->
-    <div class="container container-principal">
-        oi
-    </div>
-
-    <div class="contato">
-        <div class="container">
-            <label class="titulo-contato">Contato:</label>
-            <label class="data-contato">E-mail: gp@empresa.com</label>
-            <label class="data-contato">Telefone: (48) - 98998-1234</label>
+    <!--CORPO/CONTEÚDO DO INDEX-->
+    <!--CAROUSEL-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-interval="2000" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../static/SRC/blackfriday.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../static/SRC/instrumentos.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../static/SRC/ANUNCIO.png" alt="Third slide">
+            </div>
         </div>
     </div>
 
-    <footer>
-        <label class="data-footer"><i class="far fa-copyright"></i> 2020 Todos os direitos reservados.</label>
-    </footer>
+    <!--CATEGORIAS-->
+    <section>
+        <h1>index</h1>
 
+        <!--CARDS CATEGORIAS-->
+          <!--LINHA 1-->
+          <div class="row">
 
+            <!--CARD DE RECEITA, TENTANDO ARRUMAR O TITULO DO LINK PARA FICAR COM FORMATAÇÃO DESEJADA-->
+            <div class="col-sm-3">
+                <a href="../HTML/Receitas.html">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                        <img class="card-img-top img" src="https://diaonline.ig.com.br/wp-content/uploads/2020/07/comida-caseira-brasilia_capa-1024x683.jpg" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 15px;">Pratos quentes</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-    <!-- JS -->
-    <script th:src="@{/js/jquery-3.5.1.min.js}"></script>
-    <script th:src="@{/bootstrap-4.5.2/js/bootstrap.min.js}"></script>
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRaG1Q4CuJ99GDaBzGdO0xgrwE8No4Cg2a_GS3bh7VMx__UttEpCdAwS4JWXN69jLPQil8shz1_gl-Pf6xkMBzWM86G7qPGU2n-CFUM9nc&usqp=CAE" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Guitarra - Tagima - Vermelho</h5>
+                  <p class="card-text" id="preco">569,90</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://images-americanas.b2w.io/produtos/01/00/img/1515527/7/1515527717_1GG.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Teclado - Casio - Branco</h5>
+                  <p class="card-text" id="preco">785,69</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://w3.ezcdn.com.br/templomusical/fotos/zoom/1002fz2/contra-baixo-ativo-cort-action-dlx-6-cordas-act-ash-opn-vi-com-pre-amp-mark-bass.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Contrabaixo - Cort Action - Beje</h5>
+                  <p class="card-text" id="preco">2054,36</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!--LINHA 2-->
+          <div class="row">
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://d2figssdufzycg.cloudfront.net/Custom/Content/Products/13/45/13450060_mesa-de-som-soundcraft-digital-ui-24r-bivolt-316013_m28_637152580794694566.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Mesa de Som Digital - Soundcraft - Azul</h5>
+                  <p class="card-text" id="preco">5.200,20</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://elomusical.com.br/image/cache/catalog/Produtos/violas/26066-700x700.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Viola - Giannini - Louro Faia</h5>
+                  <p class="card-text" id="preco">603,00</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS683nmp9wsjb6IACQuTL8mv_6A-KLLHeD3Qw&usqp=CAU" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Caixa Acustica - Donner - Preto</h5>
+                  <p class="card-text" id="preco">358,20</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://images-submarino.b2w.io/produtos/01/00/oferta/41715/9/41715983_1GG.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Ukulele  - Kalani - Beje</h5>
+                  <p class="card-text" id="preco">567,00</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!--LINHA 3-->
+          <div class="row">
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://shopfacil.vteximg.com.br/arquivos/ids/1560272-430-430/Bateria-Tama-Rhythm-Mate-RH50H4-Branca_0.jpg?v=635705727639000000" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Bateria - Tama - Cinza</h5>
+                  <p class="card-text" id="preco">9.898,20</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; height: 30rem;">
+                <img class="card-img-top" src="https://www.izzo.com.br/wp-content/uploads/2019/08/dolphin_9734_infantil-1.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 15px;">Pandeiro Infantil - Dolphin - Cru</h5>
+                  <p class="card-text" id="preco">34,20</p>
+                  <a href="#" class="btn" id="comprar">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+    </section>
+
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="elementoFooter">
+            © Created by Innovation TECH
+            <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
+        </div>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="../static/bootstrap-4.5.2/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery-3.5.1.min.js"></script>
+
 </body>
 </html>

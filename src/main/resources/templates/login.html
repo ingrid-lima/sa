@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--CSS-->
+    <link rel="Stylesheet" type="text/css" href="../../static/css/estilo.css">
+    <link rel="Stylesheet" href="../../static/bootstrap-4.5.2/css/bootstrap.min.css">
+    <script src="../../static/fontawesome-5.14.0/css/all.min.css"></script>
+
+</head>
+<body class="body">
+
+    <!--ALERTS-->
+    <div class="alert alert-danger msg" role="alert" id="msgErro">
+        Preencha todos os campos!
+    </div>
+    <div class="alert alert-warning msg" role="alert" id="msgErro2">
+        Senha inválida!
+    </div>
+    
+    <!--CONTAINER PRINCIPAL-->
+    <div class="div-principal">
+        <div class="imagem-logo">
+            <img src="../../static/SRC/riceAndBeans.png" id="img-logo">
+        </div>
+        <!--FORMULÁRIO-->
+        <form class="form-container">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email">
+            <input type="password" placeholder="Senha" class="inputs" id="senha">
+            <div class="botoes">
+                <button type="button" class="btns btn-login" onclick="logar()">Login</button>
+                <button type="button" class="btn-recuperar">Esqueceu sua senha?</button>
+            </div>
+        </form>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="elementoFooter">
+            © Created by Innovation TECH
+            <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
+        </div>
+    </div>
+
+
+    <!--Script-->
+    <script type="text/javascript">
+        const logar = function () {
+            let email = document.getElementById('email').value
+            let senha = document.getElementById('senha').value
+
+            if(email == "" || senha == ""){
+                $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
+            }
+               
+        } 
+    </script>
+
+     <!--SCRIPTS-->
+     <script src="../../static/bootstrap-4.5.2/js/bootstrap.min.js"></script>
+     <script src="../../static/js/jquery-3.5.1.min.js"></script>
+
+</body>
+</html>
