@@ -4,6 +4,7 @@
     src: url(../Arkhip/TTF/Arkhip-Regular.ttf);
 }
 
+/*CORPO DO HTML*/
 .body{
     margin: 0;
     padding: 0;
@@ -26,6 +27,7 @@
     height: 65px;
     width: 100%;
  }
+    /*BRAND DA MARCA*/
     .logo{
         padding: 0;
         margin-left: 200px;
@@ -33,17 +35,19 @@
         height: 85px;
         width: 170px;
     }
+
+/*LISTA DOS BOTÕES DO NAVBAR (RESPONSIVO)*/
  nav ul{
      float: right;
      margin-right: 20px;
  }
-   
  nav ul li{
      display: inline-block;
      line-height: 65px;
      margin: 0 5px;
  }
- 
+
+/*BOTÕES DE RECEITA*/
  nav ul li a{
      color: #900d0d;
      font-size: 12px;
@@ -60,6 +64,7 @@
      outline: none;
  }
  
+ /*DISPLAY RESPONSIVO*/
  .checkbtn{
       font-size: 30px;
       color: #900d0d;
@@ -69,7 +74,6 @@
       cursor: pointer;
       /*display :none; */
  }
-  
  #check{
       display: none;
  }
