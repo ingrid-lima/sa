@@ -7,11 +7,11 @@
 
     <!--LINKS PARA ESTILO DA PÁGINA-->
     <!--CSS-->
-    <link rel="stylesheet" th:href="@{../static/css/estilo.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
     <!--FONT AWESOME-->
-    <link rel="stylesheet" th:href="@{../static/fontawesome-5.14.0/js/all.min.css}">
+    <link rel="stylesheet" th:href="@{/fontawesome-5.14.0/css/all.min.css}">
     <!--BOOTSTRAP CSS-->
-    <link rel="stylesheet" th:href="@{../static/bootstrap-4.5.2/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
     
 
 </head>
@@ -30,7 +30,7 @@
     <!--CONTAINER PRINCIPAL - DIV FORMULÁRIO DE LOGIN-->
     <div class="div-principal">
         <div class="imagem-logo">
-            <img src="../static/img/riceAndBeans.png" id="img-logo">
+            <img th:src="@{/static/img/riceAndBeans.png}" id="img-logo">
         </div>
         <!--FORMULÁRIO DO LOGIN-->
         <form class="form-container">
@@ -80,10 +80,11 @@
         } 
     </script>
 
-     <!--BOOTSTRAP JAVASCRIPT-->
-     <script src="@{../static/bootstrap-4.5.2/js/bootstrap.min.js}"></script>
-     <!--jQUERY-->
-     <script src="@{../static/js/jquery-3.5.1.min.js}"></script>
+    <!--jQUERY-->
+    <script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+    <!--BOOTSTRAP JAVASCRIPT-->
+    <script th:src="@{/bootstrap-4.5.2/js/bootstrap.min.js}"></script>
+     
 
 </body>
 </html>
