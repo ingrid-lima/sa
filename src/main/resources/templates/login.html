@@ -6,13 +6,12 @@
     <title>Login</title>
 
     <!--LINKS PARA ESTILO DA PÁGINA-->
-    <!--CSS-->
-    <link rel="stylesheet" th:href="@{/css/estilo.css}">
     <!--FONT AWESOME-->
     <link rel="stylesheet" th:href="@{/fontawesome-5.14.0/css/all.min.css}">
     <!--BOOTSTRAP CSS-->
     <link rel="stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
-    
+    <!--CSS-->
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 
 </head>
 <body class="body">
@@ -30,19 +29,19 @@
     <!--CONTAINER PRINCIPAL - DIV FORMULÁRIO DE LOGIN-->
     <div class="div-principal">
         <div class="imagem-logo">
-            <img th:src="@{/static/img/riceAndBeans.png}" id="img-logo">
+            <img th:src="@{/img/riceAndBeans.png}" id="img-logo">
         </div>
         <!--FORMULÁRIO DO LOGIN-->
-        <form class="form-container">
+        <form class="form-container" th:object="${usuario}">
             <!--EMAIL-->
-            <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email" th:field="${email}">
             <!--SENHA-->
-            <input type="password" placeholder="Senha" class="inputs" id="senha">
+            <input type="password" placeholder="Senha" class="inputs" id="senha" th:field="${senha}">
             <div class="botoes">
                 <!--BOTÃO LOGAR-->
                 <button type="button" class="btns btn-login" onclick="logar()">Login</button>
                 <!--BOTÃO ESQUECI A SENHA-->
-                <button type="button" class="btn-recuperar">Esqueceu sua senha?</button>
+                <button type="button" class="btn-recuperar" th:href="@{/usuario/add}">Não tem cadastro?Cadastre-se</button>
             </div>
         </form>
     </div>

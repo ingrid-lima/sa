@@ -6,14 +6,13 @@
     <title>Cadastrar receitas</title>
 
         <!--LINKS PARA ESTILO DA PÁGINA-->
-        <!--CSS-->
-        <link rel="Stylesheet" th:href="@{/css/estilo.css}">
         <!--BOOTSTRAP CSS-->
         <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
         <!--FONT AWESOME-->
         <link rel="Stylesheet" th:href="@{/fontawesome-5.14.0/css/all.css}">
+        <!--CSS-->
+        <link rel="Stylesheet" th:href="@{/css/estilo.css}">
         
-   
 </head>
 <body>
     <!--NAVBAR DO SITE- MENU COM BOTÕES-->
@@ -23,12 +22,13 @@
                 <i class="fas fa-bars "></i>
 
         </label>
-        <img th:src="@{/static/img/RicePNG3.png}" alt="rice and beans"  class="logo">
+        <img th:src="@{/img/RicePNG3.png}" alt="rice and beans"  class="logo">
             <ul>
                 <!--LINKS DO NAVBAR-->
-                <li><a th:href="@{/}">Inicio</a></li>
-                <li><a th:href="@{/receita/add.html}">Cadastrar receita</a></li>
-                <li><a th:href="#">Categorias</a></li>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/receita/add}">Cadastrar receita</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Informações</a></li>
             </ul>
     </nav>
     <section>

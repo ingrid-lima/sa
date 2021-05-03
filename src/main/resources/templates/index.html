@@ -6,14 +6,12 @@
     <title>Rice and Beans</title>
 
     <!--LINKS PARA ESTILO DA PÁGINA-->
-    <!--CSS-->
-    <link rel="Stylesheet" th:href="#{/css/estilo.css}">
     <!--FONT AWESOME-->
-    <link rel="Stylesheet" th:href="#{/fontawesome-5.14.0/css/all.min.css}">
+    <link rel="Stylesheet" th:href="@{/fontawesome-5.14.0/css/all.min.css}">
     <!--BOOTSTRAP-->
-    <link rel="Stylesheet" th:href="#{/bootstrap-4.5.2/css/bootstrap.min.css}">
-    
-
+    <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
+    <!--CSS-->
+    <link rel="Stylesheet" th:href="@{/css/estilo.css}">
 
 </head>
 <body>
@@ -28,9 +26,9 @@
           <!--LINKS DO NAVBAR-->
             <li><a th:href="@{/}">Home</a></li>
             <li><a th:href="@{/receita/add}">Cadastrar receita</a></li>
-            <li><a th:href="#">Categorias</a></li>
-            <li><a th:href="#">Informações</a></li>
-            <li><a th:href="#">a</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Informações</a></li>
+            <li><a th:href="@{/usuario/add}">cadastro</a></li>
         </ul>
 </nav>
 
@@ -47,15 +45,15 @@
     <div class="carousel-inner">
       <!--IMAGEM SLIDE 1-->
       <div class="carousel-item active">
-        <img th:src="@{/static/img/8.png}" class="d-block w-100" alt="BEM-VINDO">
+        <img th:src="@{/img/8.png}" class="d-block w-100" alt="BEM-VINDO">
       </div>
       <div class="carousel-item">
         <!--IMAGEM SLIDE 2-->
-        <img th:src="@{/static/img/9.png}" class="d-block w-100" alt="slide anuncio">
+        <img th:src="@{/img/9.png}" class="d-block w-100" alt="slide anuncio">
       </div>
       <div class="carousel-item">
         <!--IMAGEM SLIDE 3-->
-        <img th:src="@{/static/img/10.png}" class="d-block w-100" alt="slide anuncio 2">
+        <img th:src="@{/img/10.png}" class="d-block w-100" alt="slide anuncio 2">
       </div>
     </div>
     <!--BOTÕES PARA PASSAR OS SLIDES - CONTROLES-->
@@ -84,7 +82,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
                 <!--IMAGEM DO CARD-->
-                <img class="card-img-top img" th:src="@{/static/img/download (1).png}" alt="Imagem de capa do card">
+                <img class="card-img-top img" th:src="@{/img/download (1).png}" alt="Imagem de capa do card">
                 <div class="card-body">
                     <!--TÍTILO DO CARD-->
                     <h5 class="card-title tituloCategoria">Vegano</h5>
@@ -98,7 +96,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (2).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (2).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">Tortas salgadas</h5>
@@ -112,7 +110,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (3).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (3).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">Doces veganos</h5>
@@ -126,7 +124,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (4).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (4).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">S/ Lactose</h5>
@@ -145,7 +143,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (5).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (5).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">Vegetariano</h5>
@@ -159,7 +157,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (6).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (6).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">refeicoes diarias</h5>
@@ -173,7 +171,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (7).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (7).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">Comida de vo</h5>
@@ -187,7 +185,7 @@
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/static/img/download (8).png}" alt="Imagem de capa do card">
+              <img class="card-img-top img" th:src="@{/img/download (8).png}" alt="Imagem de capa do card">
               <div class="card-body">
                 <!--TÍTILO DO CARD-->
                 <h5 class="card-title tituloCategoria">Doces</h5>
