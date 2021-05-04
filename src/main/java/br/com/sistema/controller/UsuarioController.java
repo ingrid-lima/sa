@@ -35,7 +35,7 @@ public class UsuarioController {
 		} catch (Exception e) {
 			System.out.println("Erro ao salvar:" + e.getMessage());
 		}
-		return "redirect:/usuario/view/" + usuario.getId();
+		return "redirect:login" + usuario.getId();
 		
 }
 	

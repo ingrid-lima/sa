@@ -34,9 +34,9 @@
         <!--FORMULÁRIO DO LOGIN-->
         <form class="form-container" th:object="${usuario}">
             <!--EMAIL-->
-            <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email" th:field="${email}">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email" th:field="${usuario.email}">
             <!--SENHA-->
-            <input type="password" placeholder="Senha" class="inputs" id="senha" th:field="${senha}">
+            <input type="password" placeholder="Senha" class="inputs" id="senha" th:field="${usuario.senha}">
             <div class="botoes">
                 <!--BOTÃO LOGAR-->
                 <button type="submit" class="btn btn-login" onclick="logar()">Login</button>
@@ -58,7 +58,7 @@
     <script type="text/javascript">
         //FUÇÃO PARA ABRIR INDEX AO CLICAR NO BOTÃO DE LOGIN
         const abrirIndex = function(){
-            window.location.href = "index.html";
+            window.location.href = "index";
             return abrirIndex;
         }
         //FUNÇÃO PARA VALIDAR SE TODOS OS CAMPOS ESTÃO PREENCHIDOS NO FORMULÁRIO DE LOGIN
