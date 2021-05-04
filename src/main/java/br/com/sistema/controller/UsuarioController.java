@@ -35,9 +35,14 @@ public class UsuarioController {
 		} catch (Exception e) {
 			System.out.println("Erro ao salvar:" + e.getMessage());
 		}
+<<<<<<< Updated upstream
 		return "redirect:login" + usuario.getId();
 		
+=======
+		return "redirect:/usuario/view/" + usuario.getId();
+>>>>>>> Stashed changes
 }
+	
 	
 	@GetMapping("/usuario/list")
 	public String listUsuario(Model model) {
