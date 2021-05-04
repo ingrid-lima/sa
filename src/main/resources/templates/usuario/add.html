@@ -36,7 +36,7 @@
             <img th:src="@{/img/riceAndBeans.png}" id="img-logo">
         </div>
         <!--FORMULÁRIO DE CADASTRO-->
-        <form class="form-container" th:object="${usuario}" th:action="${usuario/save}" method="POST">
+        <form class="form-container" th:object="${usuario}" th:action="@{/usuario/save}" method="POST">
             <!--NOME-->
             <input type="name" placeholder="Nome completo" class="inputs" id="nome" onblur="name" th:field="*{nome}">
             <!--EMAIL-->
