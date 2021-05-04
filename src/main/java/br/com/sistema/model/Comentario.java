@@ -34,7 +34,7 @@ public class Comentario {
 	@JoinTable(name="comentario_receita",
 		joinColumns = @JoinColumn(name = "comentario_id"),
 		inverseJoinColumns = @JoinColumn(name = "receita_id"))
-	private List<Comentario>comentarios;
+	private List<Receita>receitas;
 
 	public Long getId() {
 		return id;
@@ -60,14 +60,18 @@ public class Comentario {
 		this.usuario = usuario;
 	}
 	
-	public List<Comentario>getComentarios(){
-		return comentarios;
+	public List<Receita> getReceitas() {
+		return receitas;
 	}
-	
-	public void setComentarios(List<Comentario> comentarios){
-		this.comentarios  = comentarios;
+
+	public void setReceitas(List<Receita> receitas) {
+		this.receitas = receitas;
 	}
-	
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	@Override
 	public String toString() {
 		return "Comentario [id=" + id + ", mensagem=" + mensagem + "]";

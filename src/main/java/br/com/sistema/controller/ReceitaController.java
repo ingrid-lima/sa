@@ -27,6 +27,7 @@ public class ReceitaController {
 	@GetMapping("/receita/add")
 	public String addReceita(Model model) {
 		model.addAttribute("receita", new Receita());
+		System.out.println("ok");
 		return "receita/add";
 	}
 	
