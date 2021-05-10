@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.com.sistema.model.Receita;
 import br.com.sistema.model.Usuario;
 import br.com.sistema.repository.UsuarioRepository;
 
@@ -35,13 +36,9 @@ public class UsuarioController {
 		} catch (Exception e) {
 			System.out.println("Erro ao salvar:" + e.getMessage());
 		}
-<<<<<<< Updated upstream
-		return "redirect:login" + usuario.getId();
-		
-=======
 		return "redirect:/usuario/view/" + usuario.getId();
->>>>>>> Stashed changes
-}
+		
+	}
 	
 	
 	@GetMapping("/usuario/list")

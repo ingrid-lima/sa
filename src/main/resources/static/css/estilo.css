@@ -289,7 +289,28 @@ h1{
 .footerCadastro{
     position: fixed;
 }
+
+/*******************INFORMAÇÕES*************************/
+.table{
+    margin-top: 60px;
+    background-color: #f4eff5;
     
+}
+.cor-tabela{
+    background-color:  #d6bebb;
+    color: #fff
+    
+}
+.lista-info{
+    margin-top: 60px;
+}
+.img-infor{
+
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+}
+
 
 /*
 .container-principal{

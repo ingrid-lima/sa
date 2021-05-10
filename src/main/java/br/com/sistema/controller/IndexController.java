@@ -16,6 +16,16 @@ public class IndexController {
 		return "login";
 	}
 	
+	@GetMapping("/informacoes")
+	public String informacoes() {
+		return "informacoes";
+	}
+	
+	@GetMapping("/categorias")
+	public String categorias() {
+		return "categorias";
+	}
+	
 	
 	
 	
