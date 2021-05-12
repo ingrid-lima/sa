@@ -30,7 +30,7 @@
             <li><a th:href="@{/informacoes}">Informações</a></li>
             <li><a th:href="@{/usuario/add}">cadastro</a></li>
         </ul>
-</nav>
+</nav> 
 
   <!--CORPO/CONTEÚDO DA PÁGINA PRINCIPAL (INDEX)-->
 
@@ -73,14 +73,12 @@
       <h1 class="tituloIndex">Categorias</h1>
       <hr class="hr3">
 
-      <!--CARDS CATEGORIAS-->
-      <div class="todosCards">
         <!--LINHA 1 DOS CARDS-->
-        <div class="row linha">
+        <div class="row">
 
           <!--PRIMEIRO CARD LINHA 1- CATEGORIA VEGANO-->
-          <div class="col-sm-3">
-            <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+          <div class="col-sm-4">
+            <div class="card shadow-lg mb-5 bg-white rounded todosCards" style="width: 18rem; height: 18rem;">
                 <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" th:src="@{/img/download (1).png}" alt="Imagem de capa do card">
                 <div class="card-body">
@@ -89,11 +87,11 @@
                     <!--BOTÃO - LINK DO CARD-->
                     <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
-            </div>
+            </div> 
           </div>
 
           <!--SEGUNDO CARD LINHA 1- CATEGORIA TORTAS SALGADAS-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (2).png}" alt="Imagem de capa do card">
@@ -107,7 +105,7 @@
           </div>
 
           <!--TERCEIRO CARD LINHA 1- CATEGORIA DOCES VEGANOS-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (3).png}" alt="Imagem de capa do card">
@@ -121,7 +119,7 @@
           </div>
 
           <!--QUARTO CARD LINHA 1- CATEGORIA SEM LACTOSE-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (4).png}" alt="Imagem de capa do card">
@@ -140,7 +138,7 @@
         <div class="row linha">
 
           <!--PRIMEIRO CARD LINHA 2- CATEGORIA VEGETARIANO-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (5).png}" alt="Imagem de capa do card">
@@ -154,7 +152,7 @@
           </div>
 
           <!--SEGUNDO CARD LINHA 2- CATEGORIA REFEIÇÕES DIÁRIAS-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (6).png}" alt="Imagem de capa do card">
@@ -168,7 +166,7 @@
           </div>
 
           <!--TERCEIRO CARD LINHA 2- CATEGORIA COMIDA DE VÓ-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (7).png}" alt="Imagem de capa do card">
@@ -182,7 +180,7 @@
           </div>
 
           <!--QUARTO CARD LINHA 2- CATEGORIA DOCES-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (8).png}" alt="Imagem de capa do card">
