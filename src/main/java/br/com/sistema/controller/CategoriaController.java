@@ -24,42 +24,48 @@ public class CategoriaController {
 	public String listCategoria(Model model) {
 		
 		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("bolos")));
-		return "categoria/list/bolos";
+		
+		return "categoria/list";
 	}
 	
 	@GetMapping("/categoria/list/salgados")
-	public String listCategoria1(Model model) {
+	public String listCategoria(Model model) {
 		
 		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("salgados")));
-		return "categoria/list/salgados";
+		
+		return "categoria/list";
 	}
 	
 	@GetMapping("/categoria/list/massas")
-	public String listCategoria2(Model model) {
+	public String listCategoria(Model model) {
 		
 		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("massas")));
-		return "categoria/list/massas";
+		
+		return "categoria/list";
 	}
 	
 	@GetMapping("/categoria/list/tortas")
-	public String listCategoria3(Model model) {
+	public String listCategoria(Model model) {
 		
 		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("tortas")));
-		return "categoria/list/tortas";
+		
+		return "categoria/list";
 	}
 	
 	@GetMapping("/categoria/list/vegetarianos")
-	public String listCategoria4(Model model) {
+	public String listCategoria(Model model) {
 		
 		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("vegetarianos")));
-		return "categoria/list/vegetarianos";
+		
+		return "categoria/list";
 	}
 	
 	@GetMapping("/categoria/list/vegano")
-	public String listCategoria5(Model model) {
+	public String listCategoria(Model model) {
 		
 		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("vegano")));
-		return "categoria/list/vegano";
+		
+		return "categoria/list";
 	}
 	
 	

@@ -304,15 +304,38 @@ h1{
     
 }
 .lista-info{
+
     margin-top: 35px;
-    background-color: rgb(248, 242, 242);
+    margin-left: 50px; 
 
 }
+
+.img-info{
+
+margin-left: 50px;
+
+}
+
 .img-infor{
 
     width: 250px;
     height: 250px;
-    margin-left: 20px;
+    
+}
+
+.mb-3{
+    
+    align-items: center;
+    text-align: center;
+
+}
+
+.my-4{
+
+    margin-top: 10px;
+    margin-left: 50px;
+   
+
 }
 
 

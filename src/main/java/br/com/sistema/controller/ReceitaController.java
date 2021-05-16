@@ -24,47 +24,47 @@ public class ReceitaController {
 		
 		model.addAttribute("receitas", receitaRepository.findAll(Sort.by("bolos")));
 		
-		return "receita/list/bolos";
+		return "receita/list";
 	}
 	
 	@GetMapping("/receita/list/salgados")
-	public String listReceita1(Model model) {
+	public String listReceita(Model model) {
 		
 		model.addAttribute("receitas", receitaRepository.findAll(Sort.by("salgados")));
 		
-		return "receita/list/salgados";
+		return "receita/list";
 	}
 	
 	@GetMapping("/receita/list/massas")
-	public String listReceita2(Model model) {
+	public String listReceita(Model model) {
 		
 		model.addAttribute("receitas", receitaRepository.findAll(Sort.by("massas")));
 		
-		return "receita/list/massas";
+		return "receita/list";
 	}
 	
 	@GetMapping("/receita/list/tortas")
-	public String listReceita3(Model model) {
+	public String listReceita(Model model) {
 		
 		model.addAttribute("receitas", receitaRepository.findAll(Sort.by("tortas")));
 		
-		return "receita/list/tortas";
+		return "receita/list";
 	}
 	
 	@GetMapping("/receita/list/vegetarianos")
-	public String listReceita4(Model model) {
+	public String listReceita(Model model) {
 		
 		model.addAttribute("receitas", receitaRepository.findAll(Sort.by("vegetarianos")));
 		
-		return "receita/list/vegetarianos";
+		return "receita/list";
 	}
 	
 	@GetMapping("/receita/list/vegano")
-	public String listReceita5(Model model) {
+	public String listReceita(Model model) {
 		
 		model.addAttribute("receitas", receitaRepository.findAll(Sort.by("vegano")));
 		
-		return "receita/list/vegano";
+		return "receita/list";
 	}
 	
 	@GetMapping("/receita/add")
