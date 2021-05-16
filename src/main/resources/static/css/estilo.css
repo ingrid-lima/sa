@@ -115,7 +115,7 @@
 /**********CARDS DAS CATEGORIAS**********/
 .todosCards{
     margin-left: 3%;
-    margin-right: auto;
+    margin: auto; 
 }
 
 .card{
