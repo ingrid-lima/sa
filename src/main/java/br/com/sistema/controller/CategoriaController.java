@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.sistema.model.Categoria;
 import br.com.sistema.repository.CategoriaRepository;
+import org.springframework.data.domain.Sort;
 
 @Controller
 public class CategoriaController {
@@ -18,18 +19,56 @@ public class CategoriaController {
 	@Autowired
 	CategoriaRepository categoriaRepository;
 	
-	@GetMapping("/categoria/list")
+	
+	@GetMapping("/categoria/list/bolos")
 	public String listCategoria(Model model) {
 		
-		model.addAttribute("categorias", categoriaRepository.findAll());
-		return "cadastrarReceita/list";
+		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("bolos")));
+		return "categoria/list/bolos";
 	}
+	
+	@GetMapping("/categoria/list/salgados")
+	public String listCategoria1(Model model) {
+		
+		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("salgados")));
+		return "categoria/list/salgados";
+	}
+	
+	@GetMapping("/categoria/list/massas")
+	public String listCategoria2(Model model) {
+		
+		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("massas")));
+		return "categoria/list/massas";
+	}
+	
+	@GetMapping("/categoria/list/tortas")
+	public String listCategoria3(Model model) {
+		
+		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("tortas")));
+		return "categoria/list/tortas";
+	}
+	
+	@GetMapping("/categoria/list/vegetarianos")
+	public String listCategoria4(Model model) {
+		
+		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("vegetarianos")));
+		return "categoria/list/vegetarianos";
+	}
+	
+	@GetMapping("/categoria/list/vegano")
+	public String listCategoria5(Model model) {
+		
+		model.addAttribute("categorias", categoriaRepository.findAll(Sort.by("vegano")));
+		return "categoria/list/vegano";
+	}
+	
 	
 	@GetMapping("/categoria/add")
 	public String addCategoria(Model model) {
 		model.addAttribute("categoria", new Categoria());
 		return "categoria/add";
 	}
+	
 	
 	@PostMapping("/categoria/save")
 	public String saveCategoria(Categoria categoria) {

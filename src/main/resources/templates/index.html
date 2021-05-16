@@ -26,7 +26,7 @@
           <!--LINKS DO NAVBAR-->
             <li><a th:href="@{/}">Home</a></li>
             <li><a th:href="@{/receita/add}">Cadastrar receita</a></li>
-            <li><a href="#">Categorias</a></li>
+            <li><a th:href="@{/categoria/add}">Categorias</a></li>
             <li><a th:href="@{/informacoes}">Informações</a></li>
             <li><a th:href="@{/usuario/add}">cadastro</a></li>
         </ul>
@@ -87,7 +87,7 @@
                     <!--TÍTILO DO CARD-->
                     <h5 class="card-title tituloCategoria">Vegano</h5>
                     <!--BOTÃO - LINK DO CARD-->
-                    <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+                    <a th:href="@{/categoria/list}" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
             </div>
           </div>
@@ -140,7 +140,7 @@
         <div class="row linha">
 
           <!--PRIMEIRO CARD LINHA 2- CATEGORIA VEGETARIANO-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (5).png}" alt="Imagem de capa do card">
@@ -154,7 +154,7 @@
           </div>
 
           <!--SEGUNDO CARD LINHA 2- CATEGORIA REFEIÇÕES DIÁRIAS-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (6).png}" alt="Imagem de capa do card">
@@ -168,7 +168,7 @@
           </div>
 
           <!--TERCEIRO CARD LINHA 2- CATEGORIA COMIDA DE VÓ-->
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
               <!--IMAGEM DO CARD-->
               <img class="card-img-top img" th:src="@{/img/download (7).png}" alt="Imagem de capa do card">
@@ -180,7 +180,7 @@
               </div>
             </div>
           </div>
-
+        </div>
           <!--QUARTO CARD LINHA 2- CATEGORIA DOCES-->
           <div class="col-sm-3">
             <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
