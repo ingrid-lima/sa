@@ -57,99 +57,104 @@
       <h1 class="tituloIndex">Categorias</h1>
       <hr class="hr3">
 
-        <!--LINHA 1 DOS CARDS-->
+      <div class="todosCards"> 
+        
+          <!--LINHA 1 DOS CARDS-->
+          <div class="row">
+
+            <!--PRIMEIRO CARD LINHA 1- CATEGORIA Vegana-->
+            <div class="col-sm-4">
+              <div class="card shadow-lg mb-5 bg-white rounded">
+                  <!--IMAGEM DO CARD-->
+                  <img class="card-img-top img" th:src="@{/img/download (1).png}" alt="Imagem de capa do card">
+                  <div class="card-body">
+                      <!--TÍTILO DO CARD-->
+                      <h5 class="card-title tituloCategoria">Vegana</h5>
+                      <!--BOTÃO - LINK DO CARD-->
+                      <a th:href="@{/categoria/list}" class="btn" id="verReceitas">Ver receitas</a>
+                  </div>
+              </div> 
+            </div>
+
+            <!--SEGUNDO CARD LINHA 1- CATEGORIA Vegetariana-->
+            <div class="col-sm-4">
+              <div class="card shadow-lg mb-5 bg-white rounded">
+                <!--IMAGEM DO CARD-->
+                <img class="card-img-top img" th:src="@{/img/download (2).png}" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <!--TÍTILO DO CARD-->
+                  <h5 class="card-title tituloCategoria">Vegetariana</h5>
+                  <!--BOTÃO - LINK DO CARD-->
+                  <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+                </div>
+              </div>
+            </div>
+
+            <!--TERCEIRO CARD LINHA 1- CATEGORIA DOCES Bolos-->
+            <div class="col-sm-4">
+              <div class="card shadow-lg mb-5 bg-white rounded">
+                <!--IMAGEM DO CARD-->
+                <img class="card-img-top img" th:src="@{/img/download (3).png}" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <!--TÍTILO DO CARD-->
+                  <h5 class="card-title tituloCategoria">Bolos</h5>
+                  <!--BOTÃO - LINK DO CARD-->
+                  <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+                </div>
+              </div>
+            </div>
+
+
+        <!--LINHA 2 DOS CARDS-->
         <div class="row">
 
-          <!--PRIMEIRO CARD LINHA 1- CATEGORIA Vegana-->
-          <div class="col-sm-4">
-            <div class="card shadow-lg mb-5 bg-white rounded todosCards">
+            <!--QUARTO CARD LINHA 2- CATEGORIA Tortas-->
+            <div class="col-sm-4">
+              <div class="card shadow-lg mb-5 bg-white rounded">
                 <!--IMAGEM DO CARD-->
-                <img class="card-img-top img" th:src="@{/img/download (1).png}" alt="Imagem de capa do card">
+                <img class="card-img-top img" th:src="@{/img/download (4).png}" alt="Imagem de capa do card">
                 <div class="card-body">
-                    <!--TÍTILO DO CARD-->
-                    <h5 class="card-title tituloCategoria">Vegana</h5>
-                    <!--BOTÃO - LINK DO CARD-->
-                    <a th:href="@{/categoria/list}" class="btn" id="verReceitas">Ver receitas</a>
+                  <!--TÍTILO DO CARD-->
+                  <h5 class="card-title tituloCategoria">Tortas</h5>
+                  <!--BOTÃO - LINK DO CARD-->
+                  <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
-            </div> 
-          </div>
-
-          <!--SEGUNDO CARD LINHA 1- CATEGORIA Vegetariana-->
-          <div class="col-sm-4">
-            <div class="card shadow-lg mb-5 bg-white rounded">
-              <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/img/download (2).png}" alt="Imagem de capa do card">
-              <div class="card-body">
-                <!--TÍTILO DO CARD-->
-                <h5 class="card-title tituloCategoria">Vegetariana</h5>
-                <!--BOTÃO - LINK DO CARD-->
-                <a href="#" class="btn" id="verReceitas">Ver receitas</a>
               </div>
             </div>
-          </div>
 
-          <!--TERCEIRO CARD LINHA 1- CATEGORIA DOCES Bolos-->
-          <div class="col-sm-4">
-            <div class="card shadow-lg mb-5 bg-white rounded">
-              <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/img/download (3).png}" alt="Imagem de capa do card">
-              <div class="card-body">
-                <!--TÍTILO DO CARD-->
-                <h5 class="card-title tituloCategoria">Bolos</h5>
-                <!--BOTÃO - LINK DO CARD-->
-                <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+            <!--PRIMEIRO CARD LINHA 2- CATEGORIA Massas-->
+            <div class="col-sm-4">
+              <div class="card shadow-lg mb-5 bg-white rounded">
+                <!--IMAGEM DO CARD-->
+                <img class="card-img-top img" th:src="@{/img/download (5).png}" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <!--TÍTILO DO CARD-->
+                  <h5 class="card-title tituloCategoria">Massas</h5>
+                  <!--BOTÃO - LINK DO CARD-->
+                  <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+                </div>
               </div>
             </div>
-          </div>
 
-
-      <!--LINHA 2 DOS CARDS-->
-      <div class="row">
-
-          <!--QUARTO CARD LINHA 2- CATEGORIA Tortas-->
-          <div class="col-sm-4">
-            <div class="card shadow-lg mb-5 bg-white rounded">
-              <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/img/download (4).png}" alt="Imagem de capa do card">
-              <div class="card-body">
-                <!--TÍTILO DO CARD-->
-                <h5 class="card-title tituloCategoria">Tortas</h5>
-                <!--BOTÃO - LINK DO CARD-->
-                <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+            <!--SEGUNDO CARD LINHA 2- CATEGORIA Salgados-->
+            <div class="col-sm-4">
+              <div class="card shadow-lg mb-5 bg-white rounded">
+                <!--IMAGEM DO CARD-->
+                <img class="card-img-top img" th:src="@{/img/download (6).png}" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <!--TÍTILO DO CARD-->
+                  <h5 class="card-title tituloCategoria">Salgados</h5>
+                  <!--BOTÃO - LINK DO CARD-->
+                  <a href="#" class="btn" id="verReceitas">Ver receitas</a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--PRIMEIRO CARD LINHA 2- CATEGORIA Massas-->
-          <div class="col-sm-4">
-            <div class="card shadow-lg mb-5 bg-white rounded">
-              <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/img/download (5).png}" alt="Imagem de capa do card">
-              <div class="card-body">
-                <!--TÍTILO DO CARD-->
-                <h5 class="card-title tituloCategoria">Massas</h5>
-                <!--BOTÃO - LINK DO CARD-->
-                <a href="#" class="btn" id="verReceitas">Ver receitas</a>
-              </div>
-            </div>
           </div>
-
-          <!--SEGUNDO CARD LINHA 2- CATEGORIA Salgados-->
-          <div class="col-sm-4">
-            <div class="card shadow-lg mb-5 bg-white rounded">
-              <!--IMAGEM DO CARD-->
-              <img class="card-img-top img" th:src="@{/img/download (6).png}" alt="Imagem de capa do card">
-              <div class="card-body">
-                <!--TÍTILO DO CARD-->
-                <h5 class="card-title tituloCategoria">Salgados</h5>
-                <!--BOTÃO - LINK DO CARD-->
-                <a href="#" class="btn" id="verReceitas">Ver receitas</a>
-              </div>
-            </div>
-          </div>
-
         </div>
+
       </div>
+      
   </section>
 
   <!--FOOTER-->
