@@ -34,37 +34,22 @@
 
   <!--CORPO/CONTEÚDO DA PÁGINA PRINCIPAL (INDEX)-->
 
-  <!--CAROUSEL DE IMAGENS - SLIDES-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <!--BOTÕES PARA MUDANÇA DE SLIDE - INDICADORES-->
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
+  <!--CAROUSEL DE IMAGENS - SLIDES-->  
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  data-interval="2500">
     <div class="carousel-inner">
       <!--IMAGEM SLIDE 1-->
       <div class="carousel-item active">
-        <img th:src="@{/img/8.png}" class="d-block w-100" alt="BEM-VINDO">
+        <img class="d-block w-100" th:src="@{/img/8.png}" alt="Primeiro Slide">
       </div>
+      <!--IMAGEM SLIDE 2-->
       <div class="carousel-item">
-        <!--IMAGEM SLIDE 2-->
-        <img th:src="@{/img/9.png}" class="d-block w-100" alt="slide anuncio">
+        <img class="d-block w-100" th:src="@{/img/9.png}" alt="Segundo Slide">
       </div>
+      <!--IMAGEM SLIDE 3-->
       <div class="carousel-item">
-        <!--IMAGEM SLIDE 3-->
-        <img th:src="@{/img/10.png}" class="d-block w-100" alt="slide anuncio 2">
+        <img class="d-block w-100" th:src="@{/img/10.png}" alt="Terceiro Slide">
       </div>
     </div>
-    <!--BOTÕES PARA PASSAR OS SLIDES - CONTROLES-->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
 <!--CATEGORIAS-->
