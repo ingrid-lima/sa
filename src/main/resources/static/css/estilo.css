@@ -115,11 +115,14 @@
 /**********CARDS DAS CATEGORIAS**********/
 .todosCards{
     margin-left: 3%;
+    margin-right: auto;
     margin: auto; 
 }
 
 .card{
     overflow: hidden;
+    width: 18rem;
+    height: 18rem;
 }
 
 /*IMAGEM DO PRODUTO - CARDS*/
@@ -153,7 +156,7 @@
     outline: none;
 }
 
-/*BOTÃO COMPRAR*/
+/*BOTÕES CARDS*/
 #verReceitas{
     position: absolute;
     margin-left: auto;
