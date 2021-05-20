@@ -4,8 +4,8 @@
     src: url(../Arkhip/TTF/Arkhip-Regular.ttf);
 }
 
-/*CORPO DO HTML*/
-.body{
+/*CORPO HTML - CADASTRO E LOGIN*/
+.body-cadastroELogin{
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to left, #580b0b, #770d0d);
@@ -18,7 +18,6 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
     font-family: Arkhip;
  }
  
@@ -30,28 +29,27 @@
     /*BRAND DA MARCA*/
     .logo{
         padding: 0;
-        margin-left: 200px;
+        margin-left: 100px;
         margin-top: 2px;
-        height: 85px;
-        width: 170px;
+        height: 60px;
+        width: 120px;
     }
 
 /*LISTA DOS BOTÕES DO NAVBAR (RESPONSIVO)*/
- nav ul{
-     float: right;
-     margin-right: 20px;
- }
- nav ul li{
-     display: inline-block;
-     line-height: 65px;
-     margin: 0 5px;
- }
+.ul{
+    float: right;
+    margin-right: 20px;
+}
+.li{
+    display: inline-block;
+    line-height: 65px;
+    margin: 0 5px;
+}
 
 /*BOTÕES DE RECEITA*/
  nav ul li a{
      color: #900d0d;
      font-size: 12px;
-     padding: 5px 15x;
      border-radius: 5px;
      text-decoration: none;
      outline: none;
@@ -63,27 +61,13 @@
      text-decoration: none;
      outline: none;
  }
- 
- /*DISPLAY RESPONSIVO*/
- .checkbtn{
-      font-size: 30px;
-      color: #900d0d;
-      float: right;
-      line-height: 65px;
-      margin-right: 40px;
-      cursor: pointer;
-      /*display :none; */
- }
- #check{
-      display: none;
- }
-
  /************************INDEX*************************/
 
  /*CAROUSEL*/
 .carousel{
+    position: relative;
     margin: 0%;
-    margin-top: 50px;
+    margin-top: 120px;
     padding: 0%;
     display: flex;
     align-items: baseline;
@@ -94,11 +78,16 @@
 .tituloIndex{
     font-size: 50px;
     color: #900d0d;
-    font-family: Arkhip;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
+}
+
+/*PARÁGRAFO DE INTRODUÇÃO ÀS CATEGORIAS*/
+.p-categorias{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /*LINHA - SEPARADOR HORIZONTAL*/
@@ -120,6 +109,7 @@
 }
 
 .card{
+    display: flex;
     overflow: hidden;
     width: 18rem;
     height: 18rem;

@@ -16,21 +16,47 @@
 </head>
 <body>
   <!-----------------NAVBAR DO SITE - MENU COM BOTÕES----------------->
-    <nav>
+    <!--<nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
 
         </label>
-          <img th:src="@{/img/RicePNG3.png}" alt="rice and beans"  class="logo">
+        <img th:src="@{/img/RicePNG3.png}" alt="rice and beans"  class="logo">
         <ul>
-          <!--LINKS DO NAVBAR-->
+          LINKS DO NAVBAR
             <li><a th:href="@{/}">Home</a></li>            
             <li><a th:href="@{#secao-categorias}">Categorias</a></li>
             <li><a th:href="@{/receita/add}">Cadastrar receita</a></li>
             <li><a th:href="@{/informacoes}">Informações</a></li>
             <li><a th:href="@{/usuario/add}">cadastro</a></li>
         </ul>
-</nav> 
+    </nav>-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand logo" th:href="@{/}"><img th:src="@{/img/RicePNG3.png}" alt="rice and beans"></a>
+        <ul class="navbar-nav ul">
+          <li class="nav-item active li">
+            <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(Página atual)</span></a>
+          </li>
+          <li class="nav-item li">
+            <a class="nav-link" th:href="@{#secao-categorias}">Categorias</a>
+          </li>
+          <li class="nav-item li">
+            <a class="nav-link" th:href="@{/receita/add}">Cadastrar receita</a>
+          </li>
+          <li class="nav-item li">
+            <a class="nav-link" th:href="@{/informacoes}">Informacoes</a>
+          </li>
+          <li class="nav-item li">
+            <a class="nav-link" th:href="@{/usuario/add}">cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!--------------------------CORPO/CONTEÚDO DA PÁGINA PRINCIPAL (INDEX)------------------------>
     <!---------CAROUSEL DE IMAGENS - SLIDES------->  
@@ -55,6 +81,9 @@
   <section class="secao-categorias" id="secao-categorias">
       <!--TÍTULO DAS CATEGORIAS-->
       <h1 class="tituloIndex">Categorias</h1>
+      <p class="p-categorias">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam eius, est tempora perspiciatis nesciunt nisi illum fuga nihil ipsum aliquam totam, veritatis similique deleniti eos, ipsam ex? Velit, sequi ullam!
+      </p>
       <hr class="hr3">
 
       <div class="todosCards"> 
