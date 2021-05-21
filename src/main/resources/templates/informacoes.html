@@ -17,24 +17,32 @@
 
 <body>
     
-  <!--NAVBAR DO SITE - MENU COM BOTÕES-->
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-            <i class="fas fa-bars "></i>
-    </label>
-      <img th:src="@{/img/RicePNG3.png}" alt="rice and beans"  class="logo">
-    <ul>
-      <!--LINKS DO NAVBAR-->
-        <li><a th:href="@{/}">Home</a></li>
-        <li><a th:href="@{/receita/add}">Cadastrar receita</a></li>
-        <li><a th:href="@{/informacoes}">Informações</a></li>
-        <li><a th:href="@{/usuario/add}">cadastro</a></li>
-    </ul>
+  <!--------------NAVBAR DO SITE - MENU COM BOTÕES------------------>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/RicePNG3.png}" alt="rice and beans" class="img-nav"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/receita/add}">Cadastrar receita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/informacoes}">Informacoes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/usuario/add}">cadastre-se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-</nav>
 
-
+<!-------------------------INFORMAÇÕES------------------------->
 
 <ul class="lista-info">
   <li class="media">

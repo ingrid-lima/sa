@@ -16,62 +16,40 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
     font-family: Arkhip;
- }
- 
- nav{
+ } 
+nav{
     background-image: linear-gradient(to right, #ffdbc5, #ffd7be);
     height: 65px;
     width: 100%;
- }
-    /*BRAND DA MARCA*/
-    .logo{
-        padding: 0;
-        margin-left: 100px;
-        margin-top: 2px;
-        height: 60px;
-        width: 120px;
-    }
-
-/*LISTA DOS BOTÕES DO NAVBAR (RESPONSIVO)*/
-.ul{
-    float: right;
-    margin-right: 20px;
 }
-.li{
-    display: inline-block;
-    line-height: 65px;
-    margin: 0 5px;
+/*BRAND DA MARCA*/
+.img-nav{
+    padding: 0;
+    margin-left: 150px;
+    height: 50px;
+    width: 100px;
+}
+/*BOTÕES DE NAV*/
+nav-link{
+    color: #900d0d;
+    font-size: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    outline: none;
+    text-transform: uppercase;
+}
+nav-link.active, nav-link:hover{
+    color: #cf1b1b;
+    transition: .4s;
+    text-decoration: none;
+    outline: none;
 }
 
-/*BOTÕES DE RECEITA*/
- nav ul li a{
-     color: #900d0d;
-     font-size: 12px;
-     border-radius: 5px;
-     text-decoration: none;
-     outline: none;
-     text-transform: uppercase;
- }
- a.active, a:hover{
-     color: #cf1b1b;
-     transition: .4s;
-     text-decoration: none;
-     outline: none;
- }
- /************************INDEX*************************/
-
+/************************INDEX*************************/
  /*CAROUSEL*/
 .carousel{
-    position: relative;
     margin: 0%;
-    margin-top: 120px;
-    padding: 0%;
-    display: flex;
-    align-items: baseline;
-    width: 100%;
 }
 
 /*TÍTULO - CATEGORIA*/
@@ -81,6 +59,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 60px;
 }
 
 /*PARÁGRAFO DE INTRODUÇÃO ÀS CATEGORIAS*/
@@ -88,6 +67,7 @@
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 30px;
 }
 
 /*LINHA - SEPARADOR HORIZONTAL*/
@@ -102,17 +82,18 @@
 }
 
 /**********CARDS DAS CATEGORIAS**********/
-.todosCards{
-    margin-left: 3%;
-    margin-right: auto;
-    margin: auto; 
+.linha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .card{
     display: flex;
     overflow: hidden;
-    width: 18rem;
-    height: 18rem;
+    width: 280px;
+    height: 280px;
 }
 
 /*IMAGEM DO PRODUTO - CARDS*/
@@ -120,9 +101,7 @@
     position: static;
     box-shadow: inset;
     transition: transform .2s;
-    width: 200px;
     height: 200px;
-    opacity: 0.5;
 }
 
 /***CORPO DOS CARDS - TÍTULOS E BOTÕES***/
@@ -267,20 +246,51 @@ h1{
 /***********************FOOTER*********************/
 .footer {
     width: 100%;
-    height: 25px;
+    height: 300px;
     align-items: center;
     text-align: center;
     margin: 0;
     left: 0;
     bottom: 0;
     position: static;
+    background-color: #a5a5a5;
     font-size: 12px;
     color: rgb(107, 107, 107);
 }
+
+.footer-top{
+    background-color: #900d0d;
+    color: #fff;
+    height: 80px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cliqueAquiFooter{
+    text-decoration: none;
+    overflow: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
 /*FOOTER DAS TELAS DE CADASTRO E LOGIN*/
 /*REAJUSTADO PARA FICAR NA PARTE INFERIOR DA PÁGINA*/
 .footerCadastro{
     position: fixed;
+    width: 100%;
+    height: 25px;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+    color: rgb(107, 107, 107);
 }
 
 /*******************INFORMAÇÕES*************************/
@@ -288,47 +298,29 @@ h1{
     margin-top: 10px;
     background-color: rgb(248, 242, 242);
     margin-right: 30px;
-    
-    
 }
 .cor-tabela{
     background-color:  #f8c2b7;
     color: #fff
-    
 }
 .lista-info{
-
     margin-top: 35px;
     margin-left: 50px; 
-
 }
-
 .img-info{
-
-margin-left: 50px;
-
+    margin-left: 50px;
 }
-
 .img-infor{
-
     width: 250px;
     height: 250px;
-    
 }
-
-.mb-3{
-    
+.mb-3{  
     align-items: center;
     text-align: center;
-
 }
-
 .my-4{
-
     margin-top: 10px;
     margin-left: 50px;
-   
-
 }
 
 
