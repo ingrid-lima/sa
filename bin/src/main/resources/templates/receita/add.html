@@ -6,114 +6,40 @@
     <title>Cadastrar receitas</title>
 
         <!--LINKS PARA ESTILO DA PÁGINA-->
+        <!--CSS-->
+        <link rel="Stylesheet" th:href="@{/css/estilo.css}">
         <!--BOOTSTRAP CSS-->
         <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
         <!--FONT AWESOME-->
         <link rel="Stylesheet" th:href="@{/fontawesome-5.14.0/css/all.css}">
-        <!--CSS-->
-        <link rel="Stylesheet" th:href="@{/css/estilo.css}">
         
+   
 </head>
 <body>
     <!--NAVBAR DO SITE- MENU COM BOTÕES-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/RicePNG3.png}" alt="rice and beans" class="img-nav"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(Página atual)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/receita/add}">Cadastrar receita</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/informacoes}">Informacoes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/usuario/add}">cadastre-se</a>
-            </li>
-          </ul>
-        </div>
-      </nav>  
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+                <i class="fas fa-bars "></i>
 
-
+        </label>
+        <img src="../../static/img/RicePNG3.png" alt="rice and beans"  class="logo">
+            <ul>
+                <!--LINKS DO NAVBAR-->
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../receita/receitas.html">Cadastrar receita</a></li>
+                <li><a href="#">Categorias</a></li>
+            </ul>
+    </nav>
     <section>
-
         <h1>CADASTRO DE RECEITAS</h1>
-        
-    <!--CONTEÚDO-->
-    <div class="container container-receita">
-        
-		<div class="bg-dark frm-titulo">
-            <h3>Cadastro de Receita</h3>
-        </div>
-
-        <form th:object="${receita}"
-            th:action="@{/receita/save}" method="POST">
-            <!--<div class="form-group row">
-                <label class="col-sm-2 col-form-label">Código</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="codigo" th:field="*{id}" readonly>
-                </div>    
-            </div>-->
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Título da Receita</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nome" th:field="*{nome}" required>
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Categoria</label>
-                <div class="col-sm-10">
-                    <select class="form-control" th:field="*{categoria}" required>
-                        <option value="Vegana">Vegana</option>
-                        <option value="Vegetariana">Vegetariana</option>
-                        <option value="Bolos">Bolos</option>
-                        <option value="Tortas">Tortas</option>
-                        <option value="Massas">Massas</option>
-                        <option value="Salgados">Salgados</option>
-                    </select>
-                    
-                </div>    
-            </div>
-
-            <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-5">
-                    <button type="button" class="btn btn-sm btn-light btn-controle"
-                        onclick="window.location.href='./index'">
-                        <i class="fa fa-ban"></i> Cancelar
-                    </button>
-                </div>
-                <div class="col-sm-5">
-                    <button type="submit" class="btn btn-sm btn-success btn-controle">
-                        <i class="fa fa-save"></i> Salvar
-                    </button>
-                </div>
-
-            </div>
-
-
-        </form>
-        
-    </div>
-
-        <!--FORMULÁRIO PARA POSTAR RECEITA
-        <form th:object="${receita}" th:action="@{/receita/save}" method="POST">
-            COLOCAR CAMPOS DE PREENCHIMENTO DA RECEITA
-        </form>-->
-
     </section>
 
     <!--FOOTER-->
     <div class="footer">
         <div class="elementoFooter">
             © Created by Innovation TECH
+            <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
         </div>
     </div>
 
