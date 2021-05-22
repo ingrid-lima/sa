@@ -42,6 +42,23 @@ public class Receita {
 	@Size(max=80)
 	private int tempoPreparo;
 	
+	public int getTempoPreparo() {
+		return tempoPreparo;
+	}
+
+	public void setTempoPreparo(int tempoPreparo) {
+		this.tempoPreparo = tempoPreparo;
+	}
+
+	public Set<Categoria> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Set<Categoria> categorias) {
+		this.categorias = categorias;
+	}
+
+
 	@NonNull
 	@Size(max=1000)
 	private String modoPreparo;
@@ -139,6 +156,7 @@ public class Receita {
 	public void setComentarios(List<Comentario> comentarios) {
 		this.comentarios = comentarios;
 	}
+	
 
 	@Override
 	public String toString() {
