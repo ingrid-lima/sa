@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice and Beans</title>
+
+    <!--LINKS PARA ESTILO DA PÁGINA-->
+    <!--FONT AWESOME-->
+    <link rel="Stylesheet" th:href="@{/fontawesome-5.14.0/css/all.min.css}">
+    <!--BOOTSTRAP-->
+    <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
+    <!--CSS-->
+    <link rel="Stylesheet" th:href="@{/css/estilo.css}">
+
+</head>
+
+<body>
+    
+  <!--------------NAVBAR DO SITE - MENU COM BOTÕES------------------>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/RicePNG3.png}" alt="rice and beans" class="img-nav"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/receita/add}">Cadastrar receita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/informacoes}">Informacoes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/usuario/add}">cadastre-se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!-------------------------INFORMAÇÕES------------------------->
+
+<ul class="lista-info">
+  <li class="media">
+    <img th:src="@{/img/xicara-info.jpg}" class="mr-3 img-inform" alt="informacoes">
+    <div class="media-body">
+      <h4 class="mt-0 mb-1"> Como identificar o que é uma xicará?</h4>
+     
+      <p>Muitas vezes nos pegamos se perguntando como vou saber o que é uma xicará de farinha de trigo
+         ou uma xicará de açucar entre outras dúvidas, iremos tirar sua dúvida em relação a xicará.<p>
+         A xicará falada em receita, é uma xicará de chá, diferente de caneca, que tem um formato muito maior 
+         Quando você for fazer uma receita e tiver lá nas receitas "Uma xicará de farinha de trigo", é a xicará de chá,
+         que é equivalente a 250 ml. A baixo teremos as Informações de medidas dos principais ingredientes utilizado 
+         nas receitas.
+        </p></p>
+
+    </div>
+  </li>
+  <li class="media my-4">
+    <img th:src="@{/img/colheres-infor.png}" class="mr-3 img-infor" alt="informacoes">
+    <div class="media-body">
+      <h4 class="mt-0 mb-1">Qual as diferenças entre colher de sopa e colher de chá?</h4>
+      <p>Realmente é muito confuso colher de chá, colher de sopa, colher de sobremesa ou colher de café. <p>
+        Colher de sopa é aquela colher maior, ao qual você algumas vezes prefere comer uma sopinha que sua mãe fez com a colher 
+        e não com o garfo, geralmente é a mais usada nas receitas, também tem a colher de sobremesa que é pouco usada, mas é geralmente
+        aquela que você come uma sobremesa, tem a colher de chá que é um pouco menor, mas está é a mais usada, e tem a de café 
+        que também é pouco usada. na foto ao lado demos um pequeno spoiler de quais colheres estamos falando. Um exemplo:
+        Quando você ver em uma receita "colher de azeite", então é uma colher de sopa de azeite.
+      </p> </p>
+    </div>
+  </li>
+
+  <li class="media my-4">
+    <img th:src="@{/img/medidor-info.jpg}" class="mr-3 img-infor" alt="informacoes">
+    <div class="media-body">
+      <h4 class="mt-0 mb-1">Ficou um pouco confuso?</h4>
+      <p>
+        Não será difícil, em diversos lugares existe esse conjuntinho ao lado que serve para medir o tamanho real de ingredientes
+        Compre um desses, além de ser barato é muito prático, ou um copo de medidor, abaixo mostramos uma tabela para você não se 
+        perder nas suas receitas. Acompanhe!
+      </p> 
+    </div>
+  </li>
+</ul>
+
+<table class="table">
+  <thead class="cor-tabela">
+    <tr>
+      <th scope="col col-info">LÍQUIDOS :</th>
+      <th scope="col">CHOCOLATE EM PÓ :</th>
+      <th scope="col">MANTEIGA :</th>
+      <th scope="col">AÇUCAR :</th>
+      <th scope="col">FARINHA DE TRIGO :</th>
+    </tr>
+
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>1 xicará = 240 ml</td>
+      <td>1 xicará = 90 g</td>
+      <td>1 xicará = 200 g</td>
+      <td>1 xicará = 180 g</td>
+      <td>1 xicará = 120 g</td>
+    </tr>
+
+    
+    <tr>
+      <td>1/2 xicará = 120 ml</td>
+      <td>1/2 xicará = 45 g</td>
+      <td>1/2 xicará = 100 g</td>
+      <td>1/2 xicará = 90 g</td>
+      <td>1/2 xicará = 60 g</td>
+    </tr>
+
+    <tr>
+      <td>1/3 xicará = 80 ml</td>
+      <td>1/3 xicará = 30 g</td>
+      <td>1/3 xicará = 65 g</td>
+      <td>1/3 xicará = 60 g</td>
+      <td>1/3 xicará = 40 g</td>
+    </tr>
+
+    <tr>
+      <td>1/4 xicará = 60 ml</td>
+      <td>1/4 xicará = 20 g</td>
+      <td>1 colher de sopa = 15 g</td>
+      <td>1/4 xicará = 45 g</td>
+      <td>1/4 xicará = 30 g</td>
+    </tr>
+
+    <tr>
+      <td>1 colher de sopa = 15 ml</td>
+      <td>1 colher de sopa = 6 g</td>
+      <td></td>
+      <td>1 colher de sopa = 12 g</td>
+      <td>1 colher de sopa = 7,5 g</td>
+    </tr>
+
+    <tr>
+      <td>1 colher de chá = 5 ml</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="media my-4">
+  <div class="media-body">
+    <h4 class="mt-0 mb-3">O que fazer quando as medidas estão em Inglês?</h4>
+
+    <p>1 tablespoon (tbsp, T ou TBL) = 1 colher de sopa</p>
+
+    <p>1 teaspoon (tsp ou t) = 1 colher de chá</p>
+
+    <p>1 dessert spoon (DSL) = 1 colher de sobremesa</p>
+
+    <p>1 cup = 1 xícara</p>
+
+    <p>1 gallon = 3,78 litros</p>
+
+    <p>1 ounce (oz) = 1 onça = 28,3g</p>
+
+    <p>1 fluid ounce (fl oz) = 1 onça líquida = 29,57ml (arredondamos para 30ml) = 2 colheres de sopa (2 tbsp)</p>
+
+    <p>1 quart = 946ml</p>
+
+    <p> pound (libra – lb) = 453,59g (arredondamos para 455g para ficar mais fácil)</p>
+
+   <p>1 pint = corresponde a 473ml (Estados Unidos) e 568ml (Reino Unido). Um pint é uma unidade de medida de volume e equivale a cerca de 0,665 litros.</p>
+
+
+  </div>
+</div>
+
+ <!--FOOTER-->
+ <div class="footer">
+  <div class="elementoFooter">
+      © Created by Innovation TECH
+  </div>
+</div>
+
+</body>
+</html>

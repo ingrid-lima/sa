@@ -6,18 +6,17 @@
     <title>Cadastro</title>
     
     <!--LINKS PARA ESTILO DA PÁGINA-->
-    <!--CSS-->
-    <link rel="Stylesheet" th:href="@{/css/estilo.css}">
     <!--BOOTSTRAP CSS-->
     <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
     <!--FONT AWESOME-->
     <link rel="Stylesheet" th:src="@{/fontawesome-5.14.0/css/all.min.css}">
+    <!--CSS-->
+    <link rel="Stylesheet" th:href="@{/css/estilo.css}">
 
 </head>
-<body class="body">
+<body class="body-cadastroELogin">
 
     <!--ALERTS DA VALIDAÇÃO DO CADASTRO-->
-    <!--ALERT DE ERRO NO PREENCHIMENTO-->
     <div class="alert alert-danger msg" role="alert" id="msgErro">
         Preencha todos os campos!
     </div>
@@ -33,27 +32,27 @@
     <!--CONTAINER PRINCIPAL - DIV FORMULÁRIO DO CADASTRO-->
     <div class="div-principal">
         <div class="imagem-logo">
-            <img src="../../static/img/riceAndBeans.png" id="img-logo">
+            <img th:src="@{/img/riceAndBeans.png}" id="img-logo">
         </div>
         <!--FORMULÁRIO DE CADASTRO-->
-        <form class="form-container">
+        <form class="form-container" th:object="${usuario}" th:action="@{/usuario/save}" method="POST">
             <!--NOME-->
-            <input type="name" placeholder="Nome completo" class="inputs" id="nome" onblur="name">
+            <input type="name" placeholder="Nome completo" class="inputs" id="nome" onblur="name" th:field="*{nome}">
             <!--EMAIL-->
-            <input type="email" placeholder="Email@exemplo.com" class="inputs" id="email">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs" id="email" th:field="*{email}">
             <!--SENHA-->
-            <input type="password" placeholder="Senha" class="inputs" id="senha">
-            <!--CONFIRMAR SENHA-->
+            <input type="password" placeholder="Senha" class="inputs" id="senha" th:field="*{senha}">
+            <!--CONFIRMAR SENHA--> 
             <input type="password" placeholder="Confirmar senha" class="inputs" id="confirmarSenha">
             <div class="botoes">
                 <!--BOTÃO CADASTRAR-->
-                <button type="button" class="btns" onclick="cadastrar()">Cadastrar</button>
+                <button type="submit" class="btns" onclick="cadastrar()">Cadastrar</button>
             </div>
         </form>
     </div>
 
     <!--FOOTER-->
-    <div class="footer footerCadastro">
+    <div class="footerCadastro">
         <div class="elementoFooter">
             © Created by Innovation TECH
         </div>
@@ -63,7 +62,7 @@
     <script type="text/javascript">
         //FUNÇÃO PARA ABRIR TELA DE LOGIN AO CLICAR NO BOTÃO CADASTRAR
         const abrirLogin = function(){
-            window.location.href = "../login.html";
+            window.location.href = "login";
             return abrirLogin;
         }
         //FUNÇÃO PARA VALIDAR SE OS CAMPOS DO FORMULÁRIO DE CADASTRO ESTÃO PREENCHIDOS CORRETAMENTE
