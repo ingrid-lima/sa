@@ -140,11 +140,11 @@ public class Receita {
 		this.tempoPreparo = tempoPreparo;
 	}
 
-	public Set<Categoria> getCategorias() {
+	public Set<Categoria> getCategoria() {
 		return categorias;
 	}
 
-	public void setCategorias(Set<Categoria> categorias) {
+	public void setCategoria(Set<Categoria> categorias) {
 		this.categorias = categorias;
 	}
 

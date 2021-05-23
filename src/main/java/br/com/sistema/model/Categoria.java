@@ -15,7 +15,7 @@ public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	
 	@NonNull
 	@Size
@@ -26,11 +26,11 @@ public class Categoria {
 	private Receita receita;
 
 	public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -51,7 +51,7 @@ public class Categoria {
 
 	@Override
 	public String toString() {
-		return "Categoria [Id=" + Id + ", nome=" + nome + "]";
+		return "Categoria [Id=" + id + ", nome=" + nome + "]";
 	}
 
 	
