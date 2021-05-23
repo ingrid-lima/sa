@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar receitas</title>
 
-        <!--LINKS PARA ESTILO DA PÁGINA-->
-        <!--BOOTSTRAP CSS-->
-        <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
-        <!--FONT AWESOME-->
-        <link rel="Stylesheet" th:href="@{/fontawesome-5.14.0/css/all.css}">
-        <!--CSS-->
-        <link rel="Stylesheet" th:href="@{/css/estilo.css}">
+    <!--LINKS PARA ESTILO DA PÁGINA-->
+    <!--BOOTSTRAP CSS-->
+    <link rel="Stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
+    <!--FONT AWESOME-->
+    <link rel="Stylesheet" th:href="@{/fontawesome-5.14.0/css/all.css}">
+    <!--CSS-->
+    <link rel="Stylesheet" th:href="@{/css/estilo.css}">
         
 </head>
 <body>
@@ -106,35 +106,39 @@
               </div>
           </div> 
 
-          <!--TEMPO DE PREPARO-->
-          <div class="tempoPreparo">
-            <div class="form-group row">
-              <label class="col-sm-2 col-form-label">Tempo de preparo</label>
-            </div>
-            <div class="row">
-              <div class="col-sm-3">
-                <input type="number" class="form-control" id="tempoPreparo" th:field="*{tempoPreparo}" required>
+          
+          <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <!--TEMPO DE PREPARO-->
+            <div class="tempoPreparo">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Tempo de preparo</label>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" id="tempoPreparo" th:field="*{tempoPreparo}" required>
+                </div>
+              </div>
+              <div class="row">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  O tempo de preparo deve ser informado em minutos.
+                </small>
               </div>
             </div>
-            <div class="row">
-              <small id="passwordHelpBlock" class="form-text text-muted">
-                O tempo de preparo deve ser informado em minutos.
-              </small>
+            
+            <!--PORÇÕES-->
+            <div class="porcoes">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Porcoes</label>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-5">
+                  <input type="number" class="form-control" id="porcoes" th:field="*{porcoes}" required>
+                </div>
+              </div>
             </div>
           </div>
           
-        
-          <!--PORÇÕES-->
-          <div class="porcoes">
-            <div class="form-group row">
-              <label class="col-sm-2 col-form-label">Porcoes</label>
-            </div>
-            <div class="form-group row">
-              <div class="col-sm-5">
-                <input type="number" class="form-control" id="porcoes" th:field="*{porcoes}" required>
-              </div>
-            </div>
-          </div>
 
           <!--BOTÕES SALVAR E CANCELAR-->
           <div class="form-group row">
@@ -164,29 +168,29 @@
     </section>
 
     <!--FOOTER-->
-  <div class="footer">
-    <div class="footer-top">
-      Quer postar uma receita?
-      <a class="cliqueAquiFooter" th:href="@{/receita/add}">Clique Aqui!</a>
-    </div>
-    <div class="div-logosRedesSociais">
-      <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
-      <a th:href="@{/}"><i class="fab fa-youtube"></i></a>
-      <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
-      <a th:href="@{/}"><i class="fab fa-twitter"></i></a>
-      <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
-    </div>
-    <div class="paragrafo-footer">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi accusamus eligendi laudantium quibusdam in amet nostrum similique voluptatibus aspernatur, voluptate placeat fugiat ullam odit voluptates beatae ut cum fuga.
-      </p>
-    </div>
-    <div class="elemento-footer-div">
-      <div class="elementoFooter">
-        © Created by Innovation TECH
+    <div class="footer">
+      <div class="footer-top">
+        Quer postar uma receita?
+        <a class="cliqueAquiFooter" th:href="@{/receita/add}">Clique Aqui!</a>
+      </div>
+      <div class="div-logosRedesSociais">
+        <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
+        <a th:href="@{/}"><i class="fab fa-youtube"></i></a>
+        <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
+        <a th:href="@{/}"><i class="fab fa-twitter"></i></a>
+        <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="paragrafo-footer">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi accusamus eligendi laudantium quibusdam in amet nostrum similique voluptatibus aspernatur, voluptate placeat fugiat ullam odit voluptates beatae ut cum fuga.
+        </p>
+      </div>
+      <div class="elemento-footer-div">
+        <div class="elementoFooter">
+          © Created by Innovation TECH
+        </div>
       </div>
     </div>
-  </div>
 
 
      <!--SCRIPTS JS-->
