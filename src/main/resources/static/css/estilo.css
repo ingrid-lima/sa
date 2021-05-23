@@ -244,13 +244,15 @@ nav-link.active, nav-link:hover{
     padding: 50px;
     border-radius: 25px;
     border: 2px solid #423144;
+}
+
+.form-group{
     justify-items: center;
     align-items: center;
     display: flex;
 }
 
 .container h3{
-    margin-left: 30px;
     font-size: 25px;
 }
 
@@ -410,7 +412,6 @@ footer{
     background-color:#f0f4f5;
     width: 100%;
 }
-*/
 
 .container-funcionarios{
     margin-top:20px;
