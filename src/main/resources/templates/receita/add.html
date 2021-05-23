@@ -42,6 +42,10 @@
     <!--CONTEÚDO-->
     <div class="container container-receita">
 
+      <div class="frm-titulo">
+        <h3>Cadastro de Receita</h3>
+      </div> 
+
       <!--FORMULÁRIO - RECEITA-->
       <form th:object="${receita}" th:action="@{/receita/save}" method="POST">
           <!--<div class="form-group row">
@@ -50,10 +54,6 @@
                   <input type="text" class="form-control" id="codigo" th:field="*{id}" readonly>
               </div>    
           </div>-->
-
-          <div class="frm-titulo">
-            <h3>Cadastro de Receita</h3>
-          </div> 
 
           <!--TÍTULO DA RECEITA-->
           <div class="form-group row">
