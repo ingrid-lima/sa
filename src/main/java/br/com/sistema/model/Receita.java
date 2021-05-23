@@ -124,20 +124,28 @@ public class Receita {
 		this.usuario = usuario;
 	}
 	
-	public Set<Categoria> getCategoria(){
-		return categorias;
-	}
-	
-	public void setCategoria(Set<Categoria>categorias) {
-		this.categorias = categorias;
-	}
-	
 	public List<Comentario> getComentarios(){
 		return comentarios;
 	}
 	
 	public void setComentarios(List<Comentario> comentarios) {
 		this.comentarios = comentarios;
+	}
+
+	public int getTempoPreparo() {
+		return tempoPreparo;
+	}
+
+	public void setTempoPreparo(int tempoPreparo) {
+		this.tempoPreparo = tempoPreparo;
+	}
+
+	public Set<Categoria> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Set<Categoria> categorias) {
+		this.categorias = categorias;
 	}
 
 	@Override

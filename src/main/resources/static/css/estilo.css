@@ -4,8 +4,8 @@
     src: url(../Arkhip/TTF/Arkhip-Regular.ttf);
 }
 
-/*CORPO DO HTML*/
-.body{
+/*CORPO HTML - CADASTRO E LOGIN*/
+.body-cadastroELogin{
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to left, #580b0b, #770d0d);
@@ -16,89 +16,58 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
     font-family: Arkhip;
- }
- 
- nav{
+ } 
+nav{
     background-image: linear-gradient(to right, #ffdbc5, #ffd7be);
     height: 65px;
     width: 100%;
- }
-    /*BRAND DA MARCA*/
-    .logo{
-        padding: 0;
-        margin-left: 200px;
-        margin-top: 2px;
-        height: 85px;
-        width: 170px;
-    }
+}
+/*BRAND DA MARCA*/
+.img-nav{
+    padding: 0;
+    margin-left: 150px;
+    height: 50px;
+    width: 100px;
+}
+/*BOTÕES DE NAV*/
+nav-link{
+    color: #900d0d;
+    font-size: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    outline: none;
+    text-transform: uppercase;
+}
+nav-link.active, nav-link:hover{
+    color: #cf1b1b;
+    transition: .4s;
+    text-decoration: none;
+    outline: none;
+}
 
-/*LISTA DOS BOTÕES DO NAVBAR (RESPONSIVO)*/
- nav ul{
-     float: right;
-     margin-right: 20px;
- }
- nav ul li{
-     display: inline-block;
-     line-height: 65px;
-     margin: 0 5px;
- }
-
-/*BOTÕES DE RECEITA*/
- nav ul li a{
-     color: #900d0d;
-     font-size: 12px;
-     padding: 5px 15x;
-     border-radius: 5px;
-     text-decoration: none;
-     outline: none;
-     text-transform: uppercase;
- }
- a.active, a:hover{
-     color: #cf1b1b;
-     transition: .4s;
-     text-decoration: none;
-     outline: none;
- }
- 
- /*DISPLAY RESPONSIVO*/
- .checkbtn{
-      font-size: 30px;
-      color: #900d0d;
-      float: right;
-      line-height: 65px;
-      margin-right: 40px;
-      cursor: pointer;
-      /*display :none; */
- }
- #check{
-      display: none;
- }
-
- /************************INDEX*************************/
-
+/************************INDEX*************************/
  /*CAROUSEL*/
 .carousel{
     margin: 0%;
-    margin-top: 50px;
-    padding: 0%;
-    display: flex;
-    align-items: baseline;
-    width: 100%;
 }
 
 /*TÍTULO - CATEGORIA*/
 .tituloIndex{
     font-size: 50px;
     color: #900d0d;
-    font-family: Arkhip;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
+    margin-top: 60px;
+}
+
+/*PARÁGRAFO DE INTRODUÇÃO ÀS CATEGORIAS*/
+.p-categorias{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
 }
 
 /*LINHA - SEPARADOR HORIZONTAL*/
@@ -107,22 +76,24 @@
 }
 .hr3 {
     border: 0;
-    height: 5px;
+    height: 3px;
     background-image: linear-gradient(to right, transparent, rgb(177, 177, 177), transparent);  
     margin-bottom: 50px;
 }
 
 /**********CARDS DAS CATEGORIAS**********/
-.todosCards{
-    margin-left: 3%;
-    margin-right: auto;
-    margin: auto; 
+.linha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .card{
+    display: flex;
     overflow: hidden;
-    width: 18rem;
-    height: 18rem;
+    width: 280px;
+    height: 280px;
 }
 
 /*IMAGEM DO PRODUTO - CARDS*/
@@ -130,9 +101,7 @@
     position: static;
     box-shadow: inset;
     transition: transform .2s;
-    width: 200px;
     height: 200px;
-    opacity: 0.5;
 }
 
 /***CORPO DOS CARDS - TÍTULOS E BOTÕES***/
@@ -269,13 +238,109 @@
 }
 
 /***************************RECEITAS*****************************/
-h1{
-    margin-top: 100px;
-    margin-left: 10%;
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 50px;
+    border-radius: 25px;
+    border: 2px solid #423144;
+    justify-items: center;
+    align-items: center;
+    display: flex;
 }
+
+.container h3{
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.container form{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
 
 /***********************FOOTER*********************/
 .footer {
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    position: static;
+    background-color: #eeeeee;
+}
+
+/*ELEMENTO FOOTER*/
+.elemento-footer-div{
+    position: static;
+    background-color: #5e0000;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elementoFooter{
+    font-size: 12px;
+    color: #c7c7c7;
+    margin: 0;
+}
+
+/*DIV DA PARTE SUPERIOR DO FOOTER*/
+.footer-top{
+    background-color: #900d0d;
+    color: #fff;
+    height: 80px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.cliqueAquiFooter{
+    text-decoration: none;
+    overflow: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.cliqueAquiFooter:hover{
+    text-decoration: none;
+    color: #ffdbc5;
+}
+/*LOGOS DE REDES SOCIAIS*/
+.div-logosRedesSociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.div-logosRedesSociais a{
+    color: #796f7a;
+    font-size: 30px;
+    margin: 10px;
+}
+.div-logosRedesSociais a:hover{
+    color: #770d0d;
+}
+/*PARÁGRAFO FOOTER*/
+.paragrafo-footer{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 150px;
+    width: auto;
+}
+/*FOOTER DAS TELAS DE CADASTRO E LOGIN*/
+/*REAJUSTADO PARA FICAR NA PARTE INFERIOR DA PÁGINA*/
+.footerCadastro{
+    position: fixed;
     width: 100%;
     height: 25px;
     align-items: center;
@@ -283,14 +348,8 @@ h1{
     margin: 0;
     left: 0;
     bottom: 0;
-    position: static;
     font-size: 12px;
     color: rgb(107, 107, 107);
-}
-/*FOOTER DAS TELAS DE CADASTRO E LOGIN*/
-/*REAJUSTADO PARA FICAR NA PARTE INFERIOR DA PÁGINA*/
-.footerCadastro{
-    position: fixed;
 }
 
 /*******************INFORMAÇÕES*************************/
@@ -298,47 +357,29 @@ h1{
     margin-top: 10px;
     background-color: rgb(248, 242, 242);
     margin-right: 30px;
-    
-    
 }
 .cor-tabela{
     background-color:  #f8c2b7;
     color: #fff
-    
 }
 .lista-info{
-
     margin-top: 35px;
     margin-left: 50px; 
-
 }
-
 .img-info{
-
-margin-left: 50px;
-
+    margin-left: 50px;
 }
-
 .img-infor{
-
     width: 250px;
     height: 250px;
-    
 }
-
-.mb-3{
-    
+.mb-3{  
     align-items: center;
     text-align: center;
-
 }
-
 .my-4{
-
     margin-top: 10px;
     margin-left: 50px;
-   
-
 }
 
 
