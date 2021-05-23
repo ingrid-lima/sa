@@ -44,28 +44,28 @@
 
     <!--------------------------CORPO/CONTEÚDO DA PÁGINA PRINCIPAL (INDEX)------------------------>
     <!---------CAROUSEL DE IMAGENS - SLIDES------->  
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="5000"> 
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4500"> 
       <div class="carousel-inner">
         <!--IMAGEM SLIDE 1-->
         <div class="carousel-item active">
-          <img class="d-block w-100" th:src="@{/img/bemVindosSlide.gif}" alt="Primeiro Slide">
+          <img class="d-block w-100" th:src="@{/img/todosSlides.gif}" alt="Primeiro Slide">
         </div>
-        <!--IMAGEM SLIDE 2-->
+        <!--IMAGEM SLIDE 2
         <div class="carousel-item">
           <img class="d-block w-100" th:src="@{/img/laranjasSlide.gif}" alt="Segundo Slide">
         </div>
-        <!--IMAGEM SLIDE 3-->
+        IMAGEM SLIDE 3
         <div class="carousel-item">
           <img class="d-block w-100" th:src="@{/img/VerdesSlide.gif}" alt="Terceiro Slide">
-        </div>
+        </div>-->
       </div>
     </div>
 
   <!---------------------CATEGORIAS------------------------->
   <section class="secao-categorias" id="secao-categorias">
       <!--TÍTULO DAS CATEGORIAS-->
-      <a><h1 class="tituloIndex">Categorias</h1></a>
-      <p class="p-categorias">
+      <a><h1 class="text-justify tituloIndex">Categorias</h1></a>
+      <p class="text-center p-categorias">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam eius, est tempora perspiciatis nesciunt nisi illum fuga nihil ipsum aliquam totam, veritatis similique deleniti eos, ipsam ex? Velit, sequi ullam!
       </p>
       <hr class="hr3">
@@ -159,17 +159,17 @@
   </section>
 
   <!--FOOTER-->
-  <div class="footer">
-    <div class="footer-top">
+  <div class="mb-4 footer">
+    <div class="d-flex footer-top">
       Quer postar uma receita?
       <a class="cliqueAquiFooter" th:href="@{/receita/add}">Clique Aqui!</a>
     </div>
     <div class="div-logosRedesSociais">
-      <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><img th:src="@{/img/facebook-icon.png}" class="logosRedesSociais"></a>
-      <a th:href="@{/}"><img th:src="@{/img/instagram-icon.png}" class="logosRedesSociais"></a>
-      <a th:href="@{/}"><img th:src="@{/img/youtube-icon.png}" class="logosRedesSociais"></a>
-      <a th:href="@{/}"><img th:src="@{/img/twitter-logo.png}" class="logosRedesSociais"></a>
-      <a th:href="@{https://github.com/ingridnycole674/sa.git}"><img th:src="@{/img/github-icon.png}" class="logosRedesSociais"></a>
+      <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
+      <a th:href="@{/}"><i class="fab fa-youtube"></i></a>
+      <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
+      <a th:href="@{/}"><i class="fab fa-twitter"></i></a>
+      <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
     </div>
     <div class="paragrafo-footer">
       <p>
