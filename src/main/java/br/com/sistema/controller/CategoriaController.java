@@ -19,6 +19,24 @@ public class CategoriaController {
 	@Autowired
 	CategoriaRepository categoriaRepository;
 	
+	@GetMapping("/categoria/add")
+	public String addCategoria(Model model) {
+		model.addAttribute("categoria", new Categoria());
+		return "categoria/add";
+	}
+	
+	@PostMapping("/categoria/save")
+	public String saveCategoria(Categoria categoria) {
+		try {
+			if(categoria != null) {
+				categoriaRepository.save(categoria);
+			}
+		} catch (Exception e) {
+			System.out.println("Erro ao salvar:" + e.getMessage());
+		}
+		return "redirect:/categoria/view/" + categoria.getId();
+		
+	}
 	
 	@GetMapping("/categoria/listbolos")
 	public String listCategoriaBolos(Model model) {
@@ -68,26 +86,6 @@ public class CategoriaController {
 		return "categoria/list";
 	}
 	
-	
-	@GetMapping("/categoria/add")
-	public String addCategoria(Model model) {
-		model.addAttribute("categoria", new Categoria());
-		return "categoria/add";
-	}
-	
-	
-	@PostMapping("/categoria/save")
-	public String saveCategoria(Categoria categoria) {
-		try {
-			if(categoria != null) {
-				categoriaRepository.save(categoria);
-			}
-		} catch (Exception e) {
-			System.out.println("Erro ao salvar:" + e.getMessage());
-		}
-		return "redirect:/categoria/view/" + categoria.getId();
-		
-	}
 	
 	@GetMapping("/categoria/view/{id}")
 	public String viewCategoria(@PathVariable long id, Model model) {

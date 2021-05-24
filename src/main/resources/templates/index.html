@@ -64,10 +64,14 @@
   <!---------------------CATEGORIAS------------------------->
   <section class="secao-categorias" id="secao-categorias">
       <!--TÍTULO DAS CATEGORIAS-->
-      <a><h1 class="text-justify tituloIndex">Categorias</h1></a>
-      <p class="text-center p-categorias">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam eius, est tempora perspiciatis nesciunt nisi illum fuga nihil ipsum aliquam totam, veritatis similique deleniti eos, ipsam ex? Velit, sequi ullam!
-      </p>
+      <div class="title row">
+        <a><h1 class="tituloIndex">Categorias</h1></a>
+      </div>
+      <div class="subtitle row">
+        <p class="p-categorias">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam eius, est tempora perspiciatis nesciunt nisi illum fuga nihil ipsum aliquam totam, veritatis similique deleniti eos, ipsam ex? Velit, sequi ullam!
+        </p>
+      </div>
       <hr class="hr3">
         
           <!--LINHA 1 DOS CARDS-->
@@ -159,27 +163,35 @@
   </section>
 
   <!--FOOTER-->
-  <div class="mb-4 footer">
-    <div class="d-flex footer-top">
+  <div class="footer">
+    <div class="footer-top row">
       Quer postar uma receita?
       <a class="cliqueAquiFooter" th:href="@{/receita/add}">Clique Aqui!</a>
     </div>
-    <div class="div-logosRedesSociais">
-      <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
-      <a th:href="@{/}"><i class="fab fa-youtube"></i></a>
-      <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
-      <a th:href="@{/}"><i class="fab fa-twitter"></i></a>
-      <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
+    <div class="div-logosRedesSociais row">
+          <div class="col-md-auto">
+            <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{https://www.youtube.com/channel/UCZnJqkBf0Z6O6RJjtlhdt9Q}"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{https://mail.google.com/mail/u/1/?fs=1&to=innovationtechriceandbeans@gmail.com&tf=cm}"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
+          </div>
     </div>
-    <div class="paragrafo-footer">
+    <div class="paragrafo-footer row">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi accusamus eligendi laudantium quibusdam in amet nostrum similique voluptatibus aspernatur, voluptate placeat fugiat ullam odit voluptates beatae ut cum fuga.
       </p>
     </div>
-    <div class="elemento-footer-div">
-      <div class="elementoFooter">
-        © Created by Innovation TECH
-      </div>
+    <div class="elemento-footer-div row">
+        <p>© Created by Innovation TECH</p>
     </div>
   </div>
 
