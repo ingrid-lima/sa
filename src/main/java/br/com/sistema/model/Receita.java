@@ -32,30 +32,22 @@ public class Receita {
 	private String ingredientes;
 	
 	@NonNull
-	private String foto;
+	private int porcoes;
 	
 	@NonNull
-	@Size(max=80)
-	private String porcoes;
-	
-	@NonNull
-	@Size(max=80)
 	private int tempoPreparo;
 	
 	@NonNull
 	@Size(max=1000)
 	private String modoPreparo;
-	
-	@ManyToOne
-	@JoinColumn(name = "classificacao_id", nullable = false)
-	private Classificacao classificacao;
-	
-	@ManyToOne
+
+	/*@ManyToOne
 	@JoinColumn(name = "usuario_id", nullable = false)
-	private Usuario usuario;
+	private Usuario usuario;*/
 	
-	@OneToMany(mappedBy = "receita")
-	private Set<Categoria> categorias;
+	@ManyToOne
+    @JoinColumn(name="categoria_id", nullable=false)
+	private Categoria categoria;
 	
 	@ManyToMany(mappedBy = "receitas")
 	private List<Comentario>comentarios;
@@ -84,19 +76,11 @@ public class Receita {
 		this.ingredientes = ingredientes;
 	}
 
-	public String getFoto() {
-		return foto;
-	}
-
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
-
-	public String getPorcoes() {
+	public int getPorcoes() {
 		return porcoes;
 	}
 
-	public void setPorcoes(String porcoes) {
+	public void setPorcoes(int porcoes) {
 		this.porcoes = porcoes;
 	}
 
@@ -108,21 +92,13 @@ public class Receita {
 		this.modoPreparo = modoPreparo;
 	}
 	
-	public Classificacao getClassificacao() {
-		return classificacao;
-	}
-	
-	public void setClassificacao(Classificacao classificacao) {
-		this.classificacao = classificacao;
-	}
-	
-	public Usuario getUsuario() {
+	/*public Usuario getUsuario() {
 		return usuario;
 	}
 	
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
+	}*/
 	
 	public List<Comentario> getComentarios(){
 		return comentarios;
@@ -140,18 +116,18 @@ public class Receita {
 		this.tempoPreparo = tempoPreparo;
 	}
 
-	public Set<Categoria> getCategoria() {
-		return categorias;
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
-	public void setCategoria(Set<Categoria> categorias) {
-		this.categorias = categorias;
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	@Override
 	public String toString() {
 		return "Receita [id=" + id + ", nome=" + nome + ","
-				+ " ingredientes=" + ingredientes + ", foto=" + foto
+				+ " ingredientes=" + ingredientes 
 				+ ", porcoes=" + porcoes + ", tempoPreparo=" + tempoPreparo + ","
 				+ " modoPreparo=" + modoPreparo + "]";
 	}

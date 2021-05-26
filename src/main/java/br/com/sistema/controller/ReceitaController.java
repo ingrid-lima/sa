@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.sistema.model.Receita;
+import br.com.sistema.repository.CategoriaRepository;
 import br.com.sistema.repository.ReceitaRepository;
 
 @Controller
@@ -17,11 +18,14 @@ public class ReceitaController {
 	@Autowired
 	ReceitaRepository  receitaRepository;
 	
+	@Autowired
+	CategoriaRepository categoriaRepository;
+	
 	@GetMapping("/receita/add")
 	public String addReceita(Model model) {
 		
 		model.addAttribute("receita", new Receita());
-		System.out.println("ok");
+		model.addAttribute("categorias", categoriaRepository.findAll()); 
 		
 		return "receita/add";
 	}
@@ -30,6 +34,7 @@ public class ReceitaController {
 	public String saveReceita(Receita receita) {
 		try {
 			if(receita != null) {
+				System.out.println(receita);
 				receitaRepository.save(receita);
 			}
 		} catch (Exception e) {
@@ -101,6 +106,7 @@ public class ReceitaController {
 	public String editReceita(@PathVariable long id, Model model) {
 		
 		model.addAttribute("receita", receitaRepository.findById(id));
+		model.addAttribute("categorias", categoriaRepository.findAll());
 		
 		return "receita/edit";
 	}

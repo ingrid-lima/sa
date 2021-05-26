@@ -50,7 +50,7 @@
           <!--<div class="form-group row">
               <label class="col-sm-2 col-form-label">Código</label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="codigo" th:field="*{id}" readonly>
+                  <input type="number" class="form-control" id="codigo" th:field="*{id}" readonly>
               </div>    
           </div>-->
 
@@ -93,24 +93,12 @@
           <!--CATEGORIAS DA RECEITA-->
           <div class="form-group row">
               <div class="col-sm-10">
-                  <select class="form-control" th:field="*{categoria}" required>
-                      <option value="" class="text-muted disabled">Selecione uma categoria</option>
-                    <optgroup label="Para Veganos"></optgroup>
-                      <option value="vegano">Vegana</option>
-                    </optgroup>
-                    <optgroup label="Para Vegetarianos">
-                      <option value="vegetarianos">Vegetariana</option>
-                    </optgroup>
-                    <optgroup label="Doces">
-                      <option value="bolos">Bolos</option>
-                      <option value="tortas">Tortas</option>
-                    </optgroup>
-                    <optgroup label="Salgados">
-                      <option value="massas">Massas</option>
-                      <option value="salgados">Salgados</option>
-                    </optgroup>
-                  </select>
-                  
+                    <select th:field="*{categoria.id}" class="form-control" required>
+                        <option th:each="c : ${categorias}" 
+                            th:value="${c.id}"
+                            th:text="${c.nome}"> 
+                        </option>
+                    </select>
               </div>    
           </div>
     
