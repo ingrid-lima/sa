@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Portifólios</title>
+    <title>view usuario</title>
 
     <!--CSS-->
     <link rel="stylesheet" th:href="@{/bootstrap-4.5.2/css/bootstrap.min.css}">
@@ -14,7 +14,7 @@
 <body>
     <!--MENU-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" th:href="@{/}">Gerenciamento de usuários</a>
+        <a class="navbar-brand" th:href="@{/}">Usuario</a>
         <!--BOTÃO MENU-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
             aria-controls="navbarMenu" aria-expanded="false">
@@ -26,9 +26,9 @@
                 <li class="nav-item">
                     <a class="nav-link " th:href="@{/}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" th:href="@{/usuario/list}">Usuários</a>
-                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link active" th:href="@{/usuario/list}">Lista de Usuarios</a>
+                </li>-->
             </ul>
         </div>
     </nav>
@@ -37,13 +37,13 @@
     <!--CONTEÚDO-->
     <div class="container container-funcionario">
         
-		<div class="bg-dark frm-titulo">
-            <h3>Usuário</h3>
+		<div class="bg-light frm-titulo">
+            <h3>Usuario</h3>
         </div>
 
         <form th:object="${usuario}">
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Código</label>
+                <label class="col-sm-2 col-form-label">Codigo</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="codigo" th:field="${usuario.id}" readonly>
                 </div>    
