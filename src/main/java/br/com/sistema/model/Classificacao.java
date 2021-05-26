@@ -28,9 +28,6 @@ public class Classificacao {
 	@JoinColumn(name = "usuario_id", referencedColumnName = "id")
 	private Usuario usuario;
 	
-	@OneToMany(mappedBy = "classificacao")
-	private Set<Receita> receitas;
-	
 	public Long getId() {
 		return id;
 	}
@@ -53,14 +50,6 @@ public class Classificacao {
 	
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
-
-	public Set<Receita> getReceita(){
-		return receitas;
-	}
-	
-	public void setReceitas(Set<Receita>receitas) {
-		this.receitas = receitas;
 	}
 	
 	@Override
