@@ -27,10 +27,13 @@
             <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(Página atual)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" th:href="@{/informacoes}">Informacoes</a>
+            <a class="nav-link" th:href="@{/informacoes}">Informações</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" th:href="@{/usuario/add}">cadastre-se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/receita/list}">Cadastrar receita</a>
           </li>
         </ul>
       </div>
@@ -41,9 +44,7 @@
     <!--CONTEÚDO-->
     <div class="container container-receita">
 
-      <div class="frm-titulo">
-        <h3>Cadastro de Receita</h3>
-      </div> 
+      
 
       <!--FORMULÁRIO - RECEITA-->
       <form class="formulario" th:object="${receita}" th:action="@{/receita/save}" method="POST">
@@ -53,6 +54,18 @@
                   <input type="number" class="form-control" id="codigo" th:field="*{id}" readonly>
               </div>    
           </div>-->
+
+
+          <div class="frm-titulo row">
+            <h3>Cadastre sua receita</h3>
+          </div> 
+          <hr class="hr3">
+
+
+          <div class="frm-titulo">
+            <h3>Cadastro de Receita</h3>
+          </div> 
+
 
           <!--TÍTULO DA RECEITA-->
           <div class="form-group row">
