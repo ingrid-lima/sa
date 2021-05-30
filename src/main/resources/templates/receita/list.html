@@ -69,7 +69,7 @@
 	                <tr th:each="receita: ${receitas}">
 	                    <td class="td-codigo" th:text="${receita.id}"></td>
 	                    <td th:text="${receita.nome}"></td>
-	                    <td th:text="${receita.cargo}"></td>
+	                    <td th:text="${receita.categoria.nome}"></td>
 	                    <td class="td-btn"><a th:href="@{'/receita/view/'+${receita.id}}"><i class="fa fa-eye cl-fa"></i></a></i></td>
 	                    <td class="td-btn"><a th:href="@{'/receita/edit/'+${receita.id}}"><i class="fa fa-edit cl-fa"></i></a></i></td>
 	                    <td class="td-btn">
