@@ -15,25 +15,28 @@
         
 </head>
 <body>
-    <!-----------------NAVBAR DO SITE - MENU COM BOTÕES----------------->
+    <!--------------NAVBAR DO SITE - MENU COM BOTÕES------------------>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/RicePNG3.png}" alt="rice and beans" class="img-nav"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
             <a class="nav-link" th:href="@{/}">Home<span class="sr-only">(Página atual)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" th:href="@{/informacoes}">Informações</a>
+            <a class="nav-link" th:href="@{/#secao-categorias}">Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/receita/add}">Cadastrar receita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/informacoes}">Informacoes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" th:href="@{/usuario/add}">cadastre-se</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" th:href="@{/receita/list}">Cadastrar receita</a>
           </li>
         </ul>
       </div>
@@ -55,25 +58,16 @@
               </div>    
           </div>-->
 
-
           <div class="frm-titulo row">
             <h3>Cadastre sua receita</h3>
           </div> 
           <hr class="hr3">
-
-
-          <div class="frm-titulo">
-            <h3>Cadastro de Receita</h3>
-          </div> 
-
-
           <!--TÍTULO DA RECEITA-->
           <div class="form-group row">
               <div class="col-sm-10">
                   <input type="text" class="form-control" id="nome" th:field="*{nome}" placeholder="Título da Receita" required>
               </div>
           </div>
-
           <!--------------PORÇÕES E TEMPO------------->
           <div class="form-group row">
             <div class="row">
@@ -96,17 +90,16 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-4">
-                    <input type="number" class="form-control" id="porcoes" th:field="*{porcoes}" required>
+                    <input type="number" class="form-control" id="porcoes" th:field="*{porcoes}"  data-toggle="tooltip" data-placement="top" title="Informe as porções" required>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
           <!--CATEGORIAS DA RECEITA-->
           <div class="form-group row">
               <div class="col-sm-10">
-                    <select th:field="*{categoria.id}" class="form-control" required>
+                    <select th:field="*{categoria.id}" class="form-control"  data-toggle="tooltip" data-placement="top" title="Escolha uma categoria" required>
                         <option th:each="c : ${categorias}" 
                             th:value="${c.id}"
                             th:text="${c.nome}"> 
@@ -114,23 +107,21 @@
                     </select>
               </div>    
           </div>
-    
           <!--INGREDIENTES-->
           <div class="form-group row">
               <div class="col-sm-10">
                   <textarea type="text" class="form-control" id="exampleFormControlTextarea1 ingredientes" rows="3" 
-                    th:field="*{ingredientes}" placeholder="Ingredientes" required></textarea>
+                    th:field="*{ingredientes}" placeholder="Ingredientes" data-toggle="tooltip" data-placement="top" title="Informe os ingredientes" required></textarea>
                   <small id="passwordHelpBlock" class="form-text text-muted">
                     Colocar um ingrediente por linha.
                   </small>
               </div>
           </div>    
-
           <!--MODO DE PREPARO-->
           <div class="form-group row">
               <div class="col-sm-10">
                   <textarea type="text" class="form-control" id="exampleFormControlTextarea1 modoPreparo" rows="3" 
-                    th:field="*{modoPreparo}" placeholder="Modo de preparo - Descreva o passo a passo da receita." required></textarea>
+                    th:field="*{modoPreparo}" placeholder="Modo de preparo - Descreva o passo a passo da receita."  data-toggle="tooltip" data-placement="top" title="Informe o modo de preparo" required></textarea>
                   <small id="passwordHelpBlock" class="form-text text-muted">
                     Colocar uma etapa por linha.
                   </small>
@@ -158,27 +149,35 @@
     </section>
 
     <!--FOOTER-->
-    <div class="footer">
-      <div class="footer-top">
-      </div>
-      <div class="div-logosRedesSociais">
-        <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
-        <a th:href="@{https://www.youtube.com/channel/UCZnJqkBf0Z6O6RJjtlhdt9Q}"><i class="fab fa-youtube"></i></a>
-        <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
-        <a th:href="@{https://mail.google.com/mail/u/1/?fs=1&to=innovationtechriceandbeans@gmail.com&tf=cm}"><i class="fas fa-envelope"></i></a>
-        <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
-      </div>
-      <div class="paragrafo-footer">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi accusamus eligendi laudantium quibusdam in amet nostrum similique voluptatibus aspernatur, voluptate placeat fugiat ullam odit voluptates beatae ut cum fuga.
-        </p>
-      </div>
-      <div class="elemento-footer-div">
-        <div class="elementoFooter">
-          © Created by Innovation TECH
-        </div>
-      </div>
+  <div class="footer">
+    <div class="footer-top row">
     </div>
+    <div class="div-logosRedesSociais row">
+          <div class="col-md-auto">
+            <a th:href="@{https://www.facebook.com/RiceAndBeansWeb}"><i class="fab fa-facebook"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{https://www.youtube.com/channel/UCZnJqkBf0Z6O6RJjtlhdt9Q}"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{/}"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{https://mail.google.com/mail/u/1/?fs=1&to=innovationtechriceandbeans@gmail.com&tf=cm}"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="col-md-auto">
+            <a th:href="@{https://github.com/ingridnycole674/sa.git}"><i class="fab fa-github"></i></a>
+          </div>
+    </div>
+    <div class="paragrafo-footer row">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi accusamus eligendi laudantium quibusdam in amet nostrum similique voluptatibus aspernatur, voluptate placeat fugiat ullam odit voluptates beatae ut cum fuga.
+      </p>
+    </div>
+    <div class="elemento-footer-div row">
+        <p>© Created by Innovation TECH</p>
+    </div>
+  </div>
 
 
      <!--SCRIPTS JS-->
