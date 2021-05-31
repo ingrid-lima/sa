@@ -1,7 +1,7 @@
 /*FONTE*/
 @font-face{
-    font-family: constance;
-    src: url(../heavitas/Heavitas.ttf);
+    font-family: heavitas;
+    src: url(../comfortaa/Comfortaa-Bold.ttf);
 }
 
 /*CORPO HTML - CADASTRO E LOGIN*/
@@ -9,20 +9,20 @@
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to left, #580b0b, #770d0d);
-    font-family: constance;
+    font-family: heavitas;
 }
 
 /******************NAVBAR*******************/
 *{
     padding: 0;
     margin: 0;
-    font-family: constance;
+    font-family: heavitas;
  } 
 nav{
     background-image: linear-gradient(to right, #ffdbc5, #ffd7be);
     height: 65px;
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
 }
 /*BRAND DA MARCA*/
 .img-nav{
@@ -66,7 +66,7 @@ nav-link.active, nav-link:hover{
 /*PARÁGRAFO DE INTRODUÇÃO ÀS CATEGORIAS*/
 .p-categorias{
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 2px;
     margin-left: 10%;
     margin-right: 10%;
@@ -114,6 +114,7 @@ nav-link.active, nav-link:hover{
 
 .card-body>h5{
     font-size: 18px;
+    color: #771212;
 }
 
 /*TÍTULO DOS PRODUTOS cards*/
@@ -261,7 +262,7 @@ nav-link.active, nav-link:hover{
     text-align: center;
 }
 .container h3{
-    font-size: 30px;
+    font-size: 40px;
     color: #aa0f0f;
     text-align: center;
 }
@@ -271,7 +272,7 @@ nav-link.active, nav-link:hover{
     margin-top: 10%;
     text-align: center;
     color: rgb(252, 224, 224);
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 50px;
     background-color: #770d0d;
     border: 2px solid #770d0d;
