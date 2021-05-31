@@ -1,17 +1,12 @@
 package br.com.sistema.model;
 
-import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.Size;
 
 import org.springframework.lang.NonNull;
@@ -28,7 +23,7 @@ public class Receita {
 	private String nome;
 	
 	@NonNull
-	@Size(max=80)
+	@Size(max=5000)
 	private String ingredientes;
 	
 	@NonNull
@@ -38,7 +33,7 @@ public class Receita {
 	private int tempoPreparo;
 	
 	@NonNull
-	@Size(max=1000)
+	@Size(max=5000)
 	private String modoPreparo;
 
 	/*@ManyToOne
@@ -49,8 +44,8 @@ public class Receita {
     @JoinColumn(name="categoria_id", nullable=false)
 	private Categoria categoria;
 	
-	@ManyToMany(mappedBy = "receitas")
-	private List<Comentario>comentarios;
+	/*@ManyToMany(mappedBy = "receitas")
+	private List<Comentario>comentarios;*/
 	
 	public Long getId() {
 		return id;
@@ -100,13 +95,13 @@ public class Receita {
 		this.usuario = usuario;
 	}*/
 	
-	public List<Comentario> getComentarios(){
+	/*public List<Comentario> getComentarios(){
 		return comentarios;
 	}
 	
 	public void setComentarios(List<Comentario> comentarios) {
 		this.comentarios = comentarios;
-	}
+	}*/
 
 	public int getTempoPreparo() {
 		return tempoPreparo;
