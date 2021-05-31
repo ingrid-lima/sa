@@ -1,7 +1,7 @@
 /*FONTE*/
 @font-face{
-    font-family: Arkhip;
-    src: url(../Arkhip/TTF/Arkhip-Regular.ttf);
+    font-family: constance;
+    src: url(../heavitas/Heavitas.ttf);
 }
 
 /*CORPO HTML - CADASTRO E LOGIN*/
@@ -9,19 +9,20 @@
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to left, #580b0b, #770d0d);
-    font-family: Arkhip;
+    font-family: constance;
 }
 
 /******************NAVBAR*******************/
 *{
     padding: 0;
     margin: 0;
-    font-family: Arkhip;
+    font-family: constance;
  } 
 nav{
     background-image: linear-gradient(to right, #ffdbc5, #ffd7be);
     height: 65px;
     width: 100%;
+    font-size: 12px;
 }
 /*BRAND DA MARCA*/
 .img-nav{
@@ -33,7 +34,6 @@ nav{
 /*BOTÕES DE NAV*/
 nav-link{
     color: #900d0d;
-    font-size: 12px;
     border-radius: 5px;
     text-decoration: none;
     outline: none;
@@ -66,6 +66,8 @@ nav-link.active, nav-link:hover{
 /*PARÁGRAFO DE INTRODUÇÃO ÀS CATEGORIAS*/
 .p-categorias{
     text-align: center;
+    font-size: 12px;
+    line-height: 2px;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 30px;
