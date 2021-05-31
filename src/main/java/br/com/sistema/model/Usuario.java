@@ -35,7 +35,7 @@ public class Usuario {
 	@Size(max = 18)
 	private String senha;
 	
-	private boolean ativo;
+	/*private boolean ativo;*/
 	
 	@ManyToMany
 	@JoinTable(name="usuario_permissao",
@@ -44,8 +44,8 @@ public class Usuario {
 	private List<Permissao>permissoes;
 
 	
-	@OneToMany(mappedBy = "usuario")
-	private Set<Comentario>comentarios;
+	/*@OneToMany(mappedBy = "usuario")
+	private Set<Comentario>comentarios;*/
 
 	/*@OneToMany(mappedBy = "usuario")
 	private Set<Receita>cadastrarReceitas;
@@ -83,13 +83,13 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	public Set<Comentario> getComentario(){
+	/*public Set<Comentario> getComentario(){
 		return comentarios;
 	}
 	
 	public void setComentario(Set<Comentario>comentarios) {
 		this.comentarios = comentarios;
-	}
+	}*/
 
 	/*public Set<Receita> getCadastrarReceita(){
 		return cadastrarReceitas;
