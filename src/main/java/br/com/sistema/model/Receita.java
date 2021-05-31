@@ -49,8 +49,8 @@ public class Receita {
     @JoinColumn(name="categoria_id", nullable=false)
 	private Categoria categoria;
 	
-	@ManyToMany(mappedBy = "receitas")
-	private List<Comentario>comentarios;
+	/*@ManyToMany(mappedBy = "receitas")
+	private List<Comentario>comentarios;*/
 	
 	public Long getId() {
 		return id;
@@ -100,13 +100,13 @@ public class Receita {
 		this.usuario = usuario;
 	}*/
 	
-	public List<Comentario> getComentarios(){
+	/*public List<Comentario> getComentarios(){
 		return comentarios;
 	}
 	
 	public void setComentarios(List<Comentario> comentarios) {
 		this.comentarios = comentarios;
-	}
+	}*/
 
 	public int getTempoPreparo() {
 		return tempoPreparo;
